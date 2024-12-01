@@ -8,6 +8,7 @@
                         <h1 style="position: relative;font-size: 42px;line-height:40px;font-weight: bold;margin-bottom: 15px;color:#fff">
                             {!! $slide['title'] !!}<br>
                             "<span style="color:#BFA474;font-weight:bold;font-size:38px;">{{ $slide['highlight_text'] }}</span>"
+                            <br />
                             @if($slide['subtitle'])
                                 <span >{{ $slide['subtitle'] }}</span>
                             @endif
