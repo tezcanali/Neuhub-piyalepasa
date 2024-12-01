@@ -20,6 +20,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
+use Outerweb\FilamentTranslatableFields\Filament\Plugins\FilamentTranslatableFieldsPlugin;
 use ShuvroRoy\FilamentSpatieLaravelHealth\FilamentSpatieLaravelHealthPlugin;
 use Z3d0X\FilamentFabricator\Enums\BlockPickerStyle;
 use Z3d0X\FilamentFabricator\FilamentFabricatorPlugin;
@@ -74,6 +75,11 @@ class AdminPanelProvider extends PanelProvider
                         'header' => 'Header',
                         'mobil_header' => 'Mobil Header',
                         'footer' => 'Footer',
+                    ]),
+                FilamentTranslatableFieldsPlugin::make()
+                    ->supportedLocales([
+                        'tr' => 'Türkçe',
+                        'en' => 'English',
                     ]),
             ]);
     }

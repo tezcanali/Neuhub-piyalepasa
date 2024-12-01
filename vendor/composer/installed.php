@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '2b33e8114d08748a77efe3372a397be6211d8669',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -575,9 +575,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '2b33e8114d08748a77efe3372a397be6211d8669',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -823,6 +823,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'outerweb/filament-translatable-fields' => array(
+            'pretty_version' => 'v2.0.1',
+            'version' => '2.0.1.0',
+            'reference' => '88deedb0d73704abb08a58147ffb91ae88e524f7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../outerweb/filament-translatable-fields',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'pboivin/filament-peek' => array(
             'pretty_version' => 'v2.2.10',
             'version' => '2.2.10.0',
@@ -1024,8 +1033,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '3.0.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '3.0.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -1388,6 +1397,15 @@
             'reference' => 'a44afe6f317959bcfdadcec3148486859fd5c1f5',
             'type' => 'library',
             'install_path' => __DIR__ . '/../spatie/laravel-sluggable',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'spatie/laravel-translatable' => array(
+            'pretty_version' => '6.8.0',
+            'version' => '6.8.0.0',
+            'reference' => '0ef7e8e9d65bb834b7c68f22ec362a6179f50381',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../spatie/laravel-translatable',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
