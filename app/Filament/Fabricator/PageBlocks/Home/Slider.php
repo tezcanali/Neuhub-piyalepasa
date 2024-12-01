@@ -38,8 +38,7 @@ class Slider extends PageBlock
                             ->required(),
 
                         TextInput::make('subtitle')
-                            ->label('Alt Metin')
-                            ->required(),
+                            ->label('Alt Metin'),
 
                         RichEditor::make('description')
                             ->label('Açıklama')
