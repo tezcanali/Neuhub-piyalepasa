@@ -79,6 +79,9 @@
                                 <strong
                                     style="color: #BFA474;font-size:40px;font-weight: 500;">{{ $highlightText1 }}</strong>
                             @endif
+                            @if($subtitle)
+                                {!! $subtitle !!}
+                            @endif
                         </{{ $headingType ?? 'h1' }}>
 
                         @if($content)
