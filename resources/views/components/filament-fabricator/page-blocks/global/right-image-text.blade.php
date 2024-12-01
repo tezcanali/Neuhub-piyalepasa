@@ -73,11 +73,11 @@
                             ="position:relative;font-size:50px;font-weight:500;color: #220728;line-height: 1.2;letter-spacing:
                     -0.05em;margin-bottom: 20px;">
                             @if($title)
-                                {{ $title }}
+                                {!! $title !!}
                             @endif
                             @if($highlightText1)
                                 <strong
-                                    style="color: #BFA474;font-size:40px;font-weight: 500;">{{ $highlightText1 }}</strong>
+                                    style="color: #BFA474;font-size:40px;font-weight: 500;">{!! $highlightText1 !!}</strong>
                             @endif
                             @if($subtitle)
                                 {!! $subtitle !!}
