@@ -3,10 +3,10 @@
     @if($title || $highlightText)
         <{{ $headingType ?? 'h6' }} style="font-weight: 500;color:#220728;font-size:40px;margin-bottom:35px;line-height: 1.2em;position:relative;">
         @if($title)
-            {{ $title }}
+            {!! $title !!}
         @endif
         @if($highlightText)
-            <strong style="display:inline;font-weight:bold;color:#BFA474;">{{ $highlightText }}</strong>
+            <strong style="display:inline;font-weight:bold;color:#BFA474;">{!! $highlightText !!}</strong>
         @endif
 </{{ $headingType ?? 'h6' }}>
 @endif
