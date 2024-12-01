@@ -35,7 +35,7 @@
 
 
                         @if($column['content'])
-                            <p>{!! $column['content'] !!}</p>
+                            <p style="max-width:none;">{!! $column['content'] !!}</p>
                         @endif
 
                         @if($column['buttonText'] && $column['buttonUrl'])
