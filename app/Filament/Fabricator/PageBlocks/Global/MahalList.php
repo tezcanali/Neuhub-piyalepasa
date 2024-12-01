@@ -48,7 +48,6 @@ class MahalList extends PageBlock
                                     ->label('Mahal Listesi Görseli')
                                     ->image()
                                     ->required()
-                                    ->maxSize(150000)
                                     ->disk('public')
                                     ->directory('global/mahal-list')
                                     ->optimize('webp')
@@ -60,7 +59,6 @@ class MahalList extends PageBlock
                                     ->label('Mahal Listesi PDF')
                                     ->acceptedFileTypes(['application/pdf'])
                                     ->required()
-                                    ->maxSize(10240)
                                     ->disk('public')
                                     ->directory('global/mahal-list')
                                     ->columnSpan(3),

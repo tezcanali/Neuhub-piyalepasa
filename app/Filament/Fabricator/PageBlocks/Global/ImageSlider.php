@@ -26,7 +26,6 @@ class ImageSlider extends PageBlock
                                             ->label('Görsel')
                                             ->image()
                                             ->required()
-                                            ->maxSize(150000)
                                             ->disk('public')
                                             ->directory('global/slider')
                                             ->optimize('webp')

@@ -42,7 +42,6 @@ class Awards extends PageBlock
                                         FileUpload::make('image')
                                             ->label('Ödül Logosu')
                                             ->image()
-                                            ->maxSize(150000)
                                             ->disk('public')
                                             ->directory('global/awards')
                                             ->optimize('webp')

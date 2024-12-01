@@ -57,7 +57,6 @@ class DairePlan extends PageBlock
                                                     ->label('Plan Görseli')
                                                     ->image()
                                                     ->required()
-                                                    ->maxSize(150000)
                                                     ->disk('public')
                                                     ->directory('global/plans')
                                                     ->optimize('webp')

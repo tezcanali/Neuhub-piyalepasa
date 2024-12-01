@@ -59,7 +59,6 @@ class CardInfo extends PageBlock
                                         FileUpload::make('image')
                                             ->label('Görsel')
                                             ->image()
-                                            ->maxSize(150000)
                                             ->disk('public')
                                             ->directory('global/card-info')
                                             ->optimize('webp')
