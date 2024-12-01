@@ -31,13 +31,11 @@ class NewsResource extends Resource
             ->schema([
                 TextInput::make('title')
                     ->label('Başlık')
-                    ->required()
                     ->translatable()
                     ->columnSpan(6),
                 FileUpload::make('image')
                     ->label('Görsel')
                     ->image()
-                    ->required()
                     ->maxSize(50000)
                     ->disk('public')
                     ->directory('news')
