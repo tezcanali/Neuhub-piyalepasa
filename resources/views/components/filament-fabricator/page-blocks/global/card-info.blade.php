@@ -22,7 +22,7 @@
                         </div>
                     @endif
                         @if($column['title'] || $column['highlightText'] || $column['content'] || $column['buttonText'])
-                    <div class="txt pl-5">
+                    <div class="txt pl-5 pr-5">
 
                             <{{ $column['headingType'] ?? 'h4' }} style="font-weight: 500;color:#220728;font-size:40px;margin-bottom:35px;line-height: 1.2em">
                                 @if($column['title'])
@@ -35,7 +35,7 @@
 
 
                         @if($column['content'])
-                            <p style="max-width:none;">{!! $column['content'] !!}</p>
+                            {!! $column['content'] !!}
                         @endif
 
                         @if($column['buttonText'] && $column['buttonUrl'])
