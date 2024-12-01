@@ -69,6 +69,10 @@
             margin-top: 70px;
         }
 
+        .full p {
+            max-width: none !important;
+        }
+
         ul {
             margin: 10px 0;
         }
