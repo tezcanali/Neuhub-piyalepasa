@@ -28,15 +28,19 @@ class Slider extends PageBlock
                             ->optimize('webp')
                             ->deletable(true)
                             ->acceptedFileTypes(['image/*']),
-                        
+
                         TextInput::make('title')
                             ->label('Başlık')
                             ->required(),
-                            
+
                         TextInput::make('highlight_text')
                             ->label('Vurgulanan Metin')
                             ->required(),
-                            
+
+                        TextInput::make('subtitle')
+                            ->label('Alt Metin')
+                            ->required(),
+
                         RichEditor::make('description')
                             ->label('Açıklama')
                             ->required()
