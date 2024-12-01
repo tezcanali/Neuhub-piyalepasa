@@ -21,7 +21,7 @@ class BasinBultenResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
-    protected static ?string $navigationLabel = 'Basın Bülten';
+    protected static ?string $navigationLabel = 'Basın Bülteni';
 
     protected static ?int $navigationSort = 3;
 
