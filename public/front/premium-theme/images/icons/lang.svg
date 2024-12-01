@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_593" data-name="Group 593" transform="translate(-120 -76)">
+    <circle id="Ellipse_15" data-name="Ellipse 15" cx="15" cy="15" r="15" transform="translate(121.001 77)" fill="none" stroke="#bfa474" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_8356" data-name="Path 8356" d="M125.07,87.627a26.358,26.358,0,0,0,21.86,0" transform="translate(0 -5.192)" fill="none" stroke="#bfa474" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_8357" data-name="Path 8357" d="M146.93,114.373a26.358,26.358,0,0,0-21.86,0" transform="translate(0 -12.808)" fill="none" stroke="#bfa474" stroke-miterlimit="10" stroke-width="2"/>
+    <ellipse id="Ellipse_16" data-name="Ellipse 16" cx="8" cy="15" rx="8" ry="15" transform="translate(128.001 77)" fill="none" stroke="#bfa474" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_49" data-name="Line 49" x2="30" transform="translate(121.001 92)" fill="none" stroke="#bfa474" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_50" data-name="Line 50" y2="30" transform="translate(136.001 77)" fill="none" stroke="#bfa474" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

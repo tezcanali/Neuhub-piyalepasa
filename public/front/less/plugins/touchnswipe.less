@@ -1,0 +1,296 @@
+/*
+	fullscreen slider
+*/
+.tns {
+	.total-center;
+	width:90%;
+	height:90%;
+	z-index:99;
+	.sliderHolder
+	{
+		width:100%;
+		min-height:100%;
+		height:100%;
+		position:relative;
+		overflow:hidden;
+		-ms-touch-action:none; 
+		touch-action:none;
+	}
+
+	.slider
+	{
+		overflow:hidden;
+		position:relative;
+		top:0px;
+		left:0px;
+		width:100%;
+		min-height:100%;
+		opacity:.99;
+	}
+
+	.sliderBg 
+	{
+		width:100%;
+		min-height:100%;
+		height:100%;
+		position:absolute;
+		left:0px;
+		top:0px;
+	}
+
+	.slides, .thumbs 
+	{
+		width:100%;
+		min-height:100%;
+		overflow:hidden;
+		position:absolute;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		cursor:pointer;
+	}
+
+	.thumbs 
+	{
+		min-height:0%;
+		bottom:25px;
+	}
+
+	.thumbsHolder 
+	{
+		width:100%;
+		height:104px;
+		bottom:30px;
+		position:absolute;
+		overflow:hidden;
+	}
+
+	.captionHolder
+	{
+		width:100%;
+		min-height:20px;
+		position:absolute;
+		overflow:hidden;
+		padding-top:5px;
+		padding-bottom:5px;
+	}
+
+	.caption 
+	{
+		width:100%;
+		min-height:20px;
+		color:#EEE;
+		top:0px;
+		text-align:center;
+		padding-top:5px;
+		padding-bottom:5px;
+		position:absolute;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+
+
+	.touchColor
+	{
+		color:#414042;
+	}
+
+	.touchLightColor
+	{
+		color:#CCCCCC;
+	}
+
+
+	.nColor
+	{
+		color:#2AACE3;
+	}
+
+	.swipeColor
+	{
+		color:#939598;	
+	}
+
+	.headerColor
+	{
+		color:#58595B;	
+	}
+
+	.footerLink, .footerLink a
+	{
+		font-size:12px;
+		text-decoration:none;
+		color:#666;
+		cursor:pointer;
+		font-weight:bold; 
+	}
+
+	.footerLink:hover
+	{
+		color:#414042;
+		text-decoration:none;
+	}
+
+	.footerCopyright
+	{
+		font-size:10px;
+	}
+
+	.infobox
+	{
+		background:#EEE;
+		border:1px solid #AAA;
+		margin:15px auto 10px auto;
+		padding:10px;
+	}
+
+	.blackBg 
+	{
+		background:#000000;
+	}
+
+	.darkGray 
+	{
+		background:#101010;
+	}
+
+	.blackBgAlpha60 
+	{
+		background: rgb(0, 0, 0);
+		background: rgba(0, 0, 0, 0.6);
+		
+	}
+
+	.blackBgAlpha90 
+	{
+		background: rgb(0, 0, 0);
+		background: rgba(0, 0, 0, 0.9);
+	}
+
+	.lightGrayBg
+	{
+		background:#CCC;	
+	}
+
+
+	.zoomOutIcon {
+		position:absolute;
+		top:60px;
+		left:10px;
+		width:40px;
+		height:40px;
+		border-radius:8px;
+		border:solid 1px @color-base;
+		box-sizing:border-box;
+		background:transparent none;
+		display:inline-block;
+		color:@color-base;
+		z-index:999;
+		font-size:14px;
+		background-color:rgba(255, 255, 255, 0.7);
+		&:hover, &:active {
+			background-color:@white;
+		}
+		&:after {
+			.total-center;
+			.icomoon;
+			content:'\e938';
+		}
+	}
+
+	.zoomInIcon {
+		position:absolute;
+		top:10px;
+		left:10px;
+		width:40px;
+		height:40px;
+		border:solid 1px @color-base;
+		margin:0;
+		border-radius:8px;
+		box-sizing:border-box;
+		background:transparent none;
+		display:inline-block;
+		color:@color-base;
+		z-index:999;
+		font-size:14px;
+		background-color:rgba(255, 255, 255, 0.7);
+		&:hover, &:active {
+			background-color:@white;
+		}
+		&:after {
+			.total-center;
+			.icomoon;
+			content:'\e937';
+		}
+	}
+	.nav {
+		.vertical-center;
+		width:40px;
+		height:90px;
+		border:solid 1px @color-base;
+		font-size:30px;
+		margin:0;
+		box-sizing:border-box;
+		background:transparent none;
+		display:inline-block;
+		color:@color-base;
+		z-index:999;
+		border-radius:8px;
+		background-color:rgba(255, 255, 255, 0.7);
+		&:after {
+			.total-center;
+			.icomoon;
+		}
+		&.prev {
+			left:10px;
+			&:after {content:"\e900";}
+		}
+		&.next {
+			right:10px;
+			&:after {content:"\e901";}
+		}
+	}
+
+	.printIcon {
+		position:absolute;
+		top:110px;
+		left:10px;
+		width:40px;
+		height:40px;
+		border:solid 1px @color-base;
+		box-sizing:border-box;
+		border-radius:8px;
+		background:transparent none;
+		display:inline-block;
+		color:@color-base;
+		z-index:999;
+		font-size:32px;
+		background-color:rgba(255, 255, 255, 0.7);
+		&:hover, &:active {
+			background-color:@white;
+		}
+		&:after {
+			.total-center;
+			.icomoon;
+			content:'\e923';
+		}
+	}
+
+}
+.960(){
+	.tns {
+		.printIcon {
+			display:none;
+		}
+	}
+}
+.480(){
+	.tns {
+		.nav {
+			font-size:18px;
+			height:60px;
+		}
+	}
+}

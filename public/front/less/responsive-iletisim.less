@@ -1,0 +1,112 @@
+.750(){
+	.section {
+		&.type-10 .form {
+			width:65%;
+		}
+		&.type-37 {
+			padding:10rem 20%;
+		}
+	}
+
+}
+.640(){
+	.section {
+		//iletişim harita
+		&.type-9 {
+			background-color:#ededed;
+			height:81.42rem;
+			padding-top:25rem;
+			overflow:hidden;
+			.map {
+				position:static;
+				width:95%;
+				height:auto;
+				img {width:100%;margin-left:5%;}
+				margin:0 auto;
+			}
+			.tab-links a {margin:0 5px;}
+			.map-text {
+				.clear;
+				position:static;
+				width:90%;
+				margin:0 auto;
+				z-index:3;
+				padding:20px;
+				border-radius:8px;
+				box-sizing:border-box;
+				.text-center;
+
+				h3 {
+					.fontbase-medium;
+					letter-spacing:-0.025em;
+					font-size:22px;
+					margin-bottom:2rem;
+				}
+				.tab {
+					p {
+						.fontbase-book;
+						font-size:12px;
+						line-height:1.4em;
+						margin:2.07rem auto;
+					}
+				}
+				.left, .right {
+					font-size:10px;
+					width:48.5%;
+					strong {
+						.inline-block;
+						.fontbase-bold;
+						line-height:1.6em;
+					}
+					p {
+						margin-bottom:1.785rem;
+						line-height:1.6em;
+					}
+					.button {
+						min-width:50%;
+						.text-center;
+					}
+				}
+			}
+		}
+		&.type-10 {
+			background-color:#f3f3f3;
+			padding:20px;
+			h1,h2,h3 {
+				&.caption {
+					display:none;
+				}
+			}
+			.form {
+				margin:0 auto;
+				width:80%;
+				padding:2.7rem 3rem;
+				background-color:@white;
+				box-sizing:border-box;
+				border-radius:0.5rem;
+			}
+		}
+		&.type-37 {
+			p {
+				font-size:12px;
+				line-height:1.4em;
+			}
+			.caption {
+				font-size:22px;
+			}
+		}
+	}
+}
+.480(){
+	.section {
+		//iletişim harita
+		&.type-10 {
+			.form {
+				width:100%;
+			}
+		}
+		&.type-37 {
+			padding:10rem 5%;
+		}
+	}
+}

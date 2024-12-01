@@ -1,0 +1,123 @@
+body.en {
+	.contact-menu {
+		width: 29.71rem;
+	}
+	//fix menu
+	.fix-menu {
+		width:111.5rem;
+		padding:1.714rem 1.87rem;
+		li {
+			margin-left:1.7rem;
+			a {
+				padding-left:3.6rem;
+				font-size:1rem;
+				i {
+					left:-0.4rem;bottom:-0.4rem;
+					font-size:3.5rem;
+				}
+				&:after {
+					bottom:-1.8em;
+					height:0.428em;
+				}
+				&:before {
+					bottom:-1.8em;
+				}
+				&.active {
+					&:after {
+						width:110%;
+					}
+				}
+			}
+		}
+		.cap {
+			font-size:1.285rem;
+			left:3.07rem;
+		}
+		&.small {
+			top:2rem;
+			li {
+				a {
+					i {
+						left:0;
+						font-size:3rem;
+						bottom:auto;
+					}
+				}
+			}
+			&.static {
+				width:43.57rem;
+			}
+		}
+	}
+	//fix menu responsive
+
+	//plans
+	.plans {
+		.right {
+			.info-left {
+				width:48%;
+				&:before {
+					right:-2em;
+				}
+				&:after {
+					right:-1.6em;
+				}
+				ul li {
+					padding:1rem;
+				}
+			}
+			.info-right {
+				width:45%;
+				font-size:0.9rem;
+				ul li {
+					padding:1rem;
+				}
+			}
+		}
+	}
+
+	//sections
+	.section {
+		&.type-2 {
+			.text {
+				width:35.14rem;
+			}
+		}
+		&.type-17 {
+			.buttons {
+				.text-center;
+				white-space:normal;
+				.button {
+					margin:10px 10px 0 0;
+				}
+			}
+		}
+	}
+
+
+
+
+}
+.640(){
+
+	body.en {
+		.contact-menu {
+			width:300px;
+		}
+	}
+}
+
+//responsive
+
+.480(){
+	.en {
+		.plans {
+			.right {
+				.info-right {
+					font-size:10px;
+				}
+			}
+		}
+		
+	}
+}

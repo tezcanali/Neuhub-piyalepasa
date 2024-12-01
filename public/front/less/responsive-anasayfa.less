@@ -1,0 +1,134 @@
+.385(){
+	.section {
+		&.type-1 {
+			.main-links {
+				width: 35rem;
+				display: block;
+				position: relative;
+				left: ~'calc( 50% - 25rem )';
+				text-align: left;
+			}
+		}
+	}
+}
+.640(){
+	.section {
+		//anasayfa
+		&.type-1 {
+			padding-top:18rem;
+			.text-center;
+			.text {
+				.w100;
+				.text-center;
+				h2 {
+					.fontbase-bold;
+					font-size:30px;
+				}
+				.button {
+					margin-top:1em;
+				}
+			}
+			&.has-video {
+				.image {
+					.no-transform;
+					position:static;
+					width:100%;
+				}
+			}
+			.main-links {
+				width: 35rem;
+				display: block;
+				position: relative;
+				left: ~'calc( 50% - 17.5rem )';
+				text-align: left;
+				a {
+					span {
+						display: inline-block;
+						&:first-child {
+							width: 20%;
+							text-align: center;
+						}
+						&:last-child {
+							width: 80%;
+						}
+					}
+				}
+			}
+			.construction-photo-link,
+			.virtual-tour-link,
+			.price-list {
+				.fontbase-bold;
+				.block;
+				z-index:8;
+				position:static;
+				letter-spacing:-0.025em;
+				line-height:0;
+				bottom:auto;
+				left:auto;
+				margin-top:14px;
+				font-size:10px;
+				img {
+					.inline-block-middle;
+					margin-right:14px;
+				}
+				.set-hover-color-basic(@black);
+			}
+			.virtual-tour-link {
+				img {
+					margin:0 20px 0 2px;
+				}
+			}
+			.polat {
+				.block;
+				position:static;
+				width:50px;
+				left:auto;
+				bottom:auto;
+				margin:14px auto 0;
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+		&.type-2 {
+			.text {
+				width:80%;
+			}
+		}
+		&.type-3 {
+			.text {
+				width:80%;
+			}
+		}
+		&.type-4 {
+			.text {
+				width:80%;
+			}
+		}
+		&.type-5 {
+			.text {
+				width:80%;
+			}
+		}
+		&.type-6 {
+			.text {
+				width:80%;
+			}
+		}
+		&.type-7 {
+			.text {
+				width:80%;
+			}
+		}
+		&.type-8 {
+			.text {
+				width:80%;
+			}
+		}
+	}
+}
+
+.960(){
+	.award-ribbon { display: none; }
+}

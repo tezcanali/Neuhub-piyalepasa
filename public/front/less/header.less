@@ -1,0 +1,250 @@
+//-------------------------------------------------------------------------------
+// Header
+//-------------------------------------------------------------------------------
+//loader
+#loader {
+	.w100;
+	position:absolute;
+	height:0.571rem;
+	background-color:@color-red;
+	top:0;left:0;
+	z-index:9;
+	span {
+		.block;
+		.w100;
+		.transition(width, 0.5s, ease-in);
+		position:absolute;top:0;left:0;
+		background-color:@color-base;
+		content:" ";
+		height:100%;
+		width:0;
+	}
+}
+
+//header
+header {
+	position:absolute;
+	width:100%;
+	top:0;left:0;
+	z-index:9;
+}
+
+#logo {
+	position:absolute;
+	z-index:99;
+}
+h1#logo {
+	.horizontal-center;
+	top:5.6rem;
+	width:17rem;
+}
+div#logo {
+	left:1.78rem;
+	top:1.78rem;
+	width:10rem;
+}
+
+//top menu
+#top-menu {
+	.fontsec-semibold;
+	.text-right;
+	.free-transform(translate3d(0,0,0));
+	position:absolute;
+	right:2.428rem;
+	top:2.3rem;
+	display:inline-block;
+	font-size:1rem;
+	z-index:10;
+	letter-spacing:0.05em;
+	> li {
+		.inline-block-middle;
+		> a {
+			display:inline-block;
+			margin-left:2.142rem;
+			color:@color-base;
+			padding-left:1.8rem;
+			position:relative;
+			i {
+				.vertical-center;
+				font-size:1.4rem;
+				left:0;
+				line-height:1;
+			}
+			.set-hover-color-basic(@black);
+		}
+		&:last-child {
+			font-size:1.285rem;
+			i {font-size:1.428rem;}
+		}	
+	}
+}
+
+.overlay {
+	z-index:998;
+	display:none;
+	cursor:pointer;
+	background-color:@color-super-light;
+	opacity:0.8;
+	width:100%;
+	height: 100%;
+	position:fixed;
+}
+
+//main menu
+#menu {
+	position:absolute;
+	padding:9.85rem 0 9rem;
+	width:0;
+	overflow:hidden;
+	height:100%;
+	right:0;
+	top:0;
+	opacity:0;
+	background-color:@color-menu-bg;
+	z-index:999;
+	box-sizing:border-box;
+	.transition-multi(~"width 0.3s ease, opacity 0.5s ease");
+	.close {
+		.fontsec-semibold;
+		position:absolute;
+		right:2.428rem;
+		top:2.3rem;
+		color:@white;
+		font-size:1.285rem;
+		i {
+			.inline-block-middle;
+			font-size:1.2rem;
+			margin-right:0.5rem;
+		}
+	}
+	.lang {
+		.fontbase-bold;
+		position:absolute;
+		left:2.428rem;
+		top:2.3rem;
+		color:@white;
+		font-size:0.857rem;
+		i {
+			.inline-block-middle;
+			font-size:1rem;
+			margin-right:0.5rem;
+		}
+
+	}
+	> ul {
+		.w100;
+		padding:0 2.428rem;
+		overflow:auto;
+		position:absolute;
+		top:9.85rem;
+		max-height:~"calc(100% - 19.7rem)";
+		&.with-customer {
+			max-height:~"calc(100% - 21rem)";
+		}
+		> li {
+			margin-bottom:1.357rem;
+			position:relative;
+			.transition-multi(~"right 0.3s ease, opacity 0.5s ease");
+			transition-delay:0.2s;
+			opacity:0;
+			right:-200%;
+			&.mobile-only {display:none;}
+			> a {
+				.fontbase-bold;
+				.block;
+				.w100;
+				color:@white;
+				font-size:1.142rem;
+				padding-bottom:1.357rem;
+				border-bottom:solid 1px @color-border-opacity-white;
+				.set-hover-color-basic(@color-red);
+			}
+			&:last-child{
+				> a {
+					border-bottom:0 none;
+				}
+			}
+			> ul {
+				display:none;
+				> li {
+					> a {
+						.fontbase-book;
+						.block;
+						.w100;
+						color:@white;
+						opacity:0.8;
+						font-size:1.142rem;
+						padding-bottom:1.3rem;
+						.transition(opacity,0.1s,ease);
+						&:hover, &:active {
+							opacity:1;
+						}
+					}
+				}
+			}
+			&.active {
+				> a {border:0 none;}
+			}
+		}
+	}
+	&.open {
+		width:33.14rem;
+		opacity:1;
+		> ul > li {
+			right:0;
+			opacity:1;
+		}   
+	}
+	.info-bar {
+		.clear;
+		bottom:2.3rem;
+		left:2.428rem;
+	}
+
+}
+
+//scroller
+#scroller {
+	.horizontal-center;
+	position:fixed;
+	line-height:0;
+	bottom:5.714rem;
+	z-index:10;
+	opacity:0;
+	cursor:auto;
+	font-size:1rem;
+	.transition-multi(~"bottom 1.4s ease, opacity 0.6s ease");
+	&.animate {
+		bottom:2.858rem;
+		opacity:1;
+	}
+	span {
+		.inline-block-middle;
+		position:relative;
+		width:4.785rem;
+		height:4.785rem;
+		border-radius:50%;
+		border:solid 0.1428rem @color-base;
+		color:@color-base;
+		box-sizing:border-box;
+		margin:0 1rem;
+		background-color: rgba(255, 255, 255, 0.5);
+		&:before {
+			.inline-block;
+			.horizontal-center;
+			.icomoon;
+			content:"\e925";
+			font-size:2.4em;
+			top:0.3em;
+
+		}
+		&:after {
+			.inline-block;
+			.horizontal-center;
+			.icomoon;
+			content:"\e8fc";
+			font-size:1.6em;
+			bottom:0;
+		}
+	}
+}

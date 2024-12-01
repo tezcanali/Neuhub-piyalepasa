@@ -1,0 +1,252 @@
+.credit-menu a:before{
+    border:none !important;
+}
+.credit-menu a:after{
+    background: none !important;
+}
+.credit-menu a:hover{
+    cursor: default !important;
+}
+.establishment a.rezidans, .establishment i.rezidans {
+    font-size: 10px;
+    font-family: 'fontbase-book', arial, helvetica, sans-serif;
+    line-height: 1.2;
+    width: initial;
+    height: initial;
+    padding: 5px;
+    top: 21.3rem !important;
+    left: 65.2% !important;
+}
+
+.establishment a.rezidans span, .establishment i.rezidans span {
+    position: static;
+    transform: translate(0, 0);
+}
+.establishment a b {
+    font-weight: bold!important;
+}
+
+.establishment a.rezidans, .establishment i.rezidans {
+    font-size: 10px;
+    font-family: 'fontbase-book', arial, helvetica, sans-serif;
+    line-height: 1.2;
+    width: initial;
+    height: initial;
+    padding: 5px;
+    top: 21.3rem !important;
+    left: 65.2% !important;
+}
+
+.establishment a.rezidans span, .establishment i.rezidans span {
+    position: static;
+    transform: translate(0, 0);
+}
+
+.establishment .pin-m.modal-open.est.rezidans{
+    top: 20.5rem!important;
+    left: 67.312%!important;
+}
+
+.intltelinput {
+    padding-left: 95px;
+}
+
+.intl-tel-input.separate-dial-code .selected-dial-code {
+    padding-left: 23px;
+}
+
+
+.privacy h1.caption{position: static;}
+.privacy h3.caption{
+	position: static;
+	text-align:left;
+	font-size: 2rem;
+	margin-top: 2.5rem;
+}
+.privacy ul{
+	list-style-type: circle;
+}
+.privacy ul b{
+	font-weight: bold;
+}
+.privacy ul li{
+	margin-bottom: 0.5rem;
+	line-height: 1.4rem;
+}
+
+.modal-privacy .pull-right{
+	float:right;
+}
+.modal-privacy strong{
+	font-weight: bold;
+}
+.modal-privacy button{
+	padding:5px 15px;
+	background: #6f1832;
+	color:#fff;
+	font-weight: bold;
+}
+.modal-privacy button:hover{
+	background: #a10d39;
+}
+.modal-privacy h1{
+  line-height: 1.25;
+}
+.modal-privacy {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1060;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 !important;
+	/* justify-items: center;
+	align-items: center;
+	justify-content: center; */
+  overflow-y: scroll;
+  max-height: 100%;
+  padding:50px 0;
+}
+.modal-privacy.active {
+  display: block;
+  background: none;
+  /* background: rgba(0.6,0.2,0.2,.35); */
+}
+.modal-privacy .modal-bg {
+	background: #b99fa5;
+	opacity: 0.8;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.modal-privacy .modal-wrapper {
+	position: absolute;
+	top: 100px;
+	left:0;
+	right:0;
+  	width: 50%;
+  	margin: 0 auto;
+}
+.modal-privacy .modal-wrapper .modal-content {
+  	margin: 0 auto;
+  	background: #fff;
+  	border-radius: 10px;
+  	padding: 45px;
+  	margin-bottom: 80px;
+}
+.modal-privacy .modal-wrapper .modal-content ul {
+    list-style-type: circle;
+    padding-left:2rem;
+}
+.modal-privacy .modal-wrapper .modal-content ol {
+    padding-left:2rem;
+}
+.modal-privacy .modal-wrapper .modal-content p + p, .modal-privacy .modal-wrapper .modal-content ul + p, .modal-privacy .modal-wrapper .modal-content p + ul, .modal-privacy .modal-wrapper .modal-content ol + p, .modal-privacy .modal-wrapper .modal-content p + ol{
+    margin-top:0.75rem;
+}
+.modal-privacy .modal-wrapper .modal-content a {
+	font-weight: bold;
+}
+.modal-privacy .modal-bg {
+  background: rgba(0,0,0,0.35);
+}
+button.aydinlatma-popup-toggler, button.acik-riza-popup-toggler{
+	color: #6f1832!important;
+	font-weight: bold;
+}
+#agreed-error {
+    margin-left: 35px;
+}
+
+#cookie-notice{
+	background: #333;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	text-align: center;
+	padding: 15px 15px 18px 15px;
+	font-size: 12px;
+	right: 0;
+	color: #fff;
+}
+#cookie-notice #cookie-link, #cookie-notice #privacyinfo-link{
+	color: #DA144F !important;
+}
+#cookie-notice #cookie-notice-close{
+	margin-left: 10px;
+	font-size: 36px;
+	position: relative;
+	top: 7px;
+}
+#cookie-notice[style*='display: none'] ~ .contact-menu {
+	bottom: 35px;
+}
+
+.modal-open.est.rezidans.labeled-rezidans {
+    width: 5rem;
+    text-align: center;
+    margin-left: -2rem;
+    margin-top: -2.5rem;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1440px) {
+    .establishment a.rezidans, .establishment i.rezidans {
+        top: 20.3rem !important;
+        left: 63.2% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .establishment a.rezidans, .establishment i.rezidans {
+        top: 19.2rem !important;
+        left: 62.5% !important;
+    }
+	.modal-privacy .modal-wrapper .modal-content {
+	  width: 70%;
+	  padding: 35px;
+	}
+}
+
+@media (max-width: 750px) {
+	.privacy{
+		padding-top:25rem!important;
+	}
+	.modal-privacy .modal-wrapper .modal-content {
+	  width: 80%;
+	  padding: 30px;
+		font-size: 14px;
+	}
+}
+@media (max-width: 640px) {
+    .establishment a.rezidans, .establishment i.rezidans {
+        top: 283px !important;
+        left: 64.7% !important;
+    }
+	.establishment .pin-m.modal-open.est.rezidans{
+	    top: 300px!important;
+	}
+	.privacy ul li{
+		margin-bottom: 0.5rem;
+		font-size:12px;
+		line-height: 1.5;
+	}
+	.modal-open.est.rezidans.labeled-rezidans {
+	    width: 13rem;
+	    text-align: center;
+	    margin-left: -5rem;
+	    margin-top: -6rem;
+	    font-size: 2.25rem;
+	}
+	.modal-privacy .modal-wrapper .modal-content {
+	  width: 90%;
+	  padding: 20px;
+		font-size: 10px;
+	}
+}

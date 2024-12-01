@@ -1,0 +1,167 @@
+﻿<krpano version="1.19" title="" onstart="loadscene(g1,null,MERGE,BLEND);" encoding="utf-8" >
+
+<!-- 
+<plugin name="options" url="plugins/options.swf" keep="true" />
+<plugin name="coor" url="plugins/coor.png" keep="true" align="center" edge="center" />
+-->
+
+<include url="plugins/loadingbar.xml" />
+
+<events onloadcomplete="delayedcall(1.0, normalview());" />
+
+	<action name="baslat">
+	  set(events.onloadcomplete, normalview());
+		delayedcall(1.0, normalview());
+	</action>
+
+	<!-- #context menu -->
+	<contextmenu versioninfo="false">
+		<item name="fs" caption="FULLSCREEN"  />
+		<item name="cc" caption="Change Controlmode" onclick="skin_changecontrolmode();"  />
+		<item name="sg-com" caption="www.sanalgezinti.com" onclick="openurl(http://www.sanalgezinti.com/,_blank);" separator="true" />
+	</contextmenu>
+
+<!-- yazı stili -->
+    <style name="gs"
+        url="%SWFPATH%/plugins/textfield.swf"
+        children="false"
+        css="text-align:center; color:#cc0000; font-family: Arial, Helvetica; font-weight:bold; font-size:14px;"
+        css.mobile="text-align:center; color:#cc0000; font-family:Arial, Helvetica; font-weight:bold; font-size:16px;"
+        width="300" height="auto"
+        edge="center"
+        handcursor="false"
+        background="false"
+        border="false"
+        textshadow="1"
+       textshadowrange="1"
+       textshadowangle="45"
+       textshadowcolor="0x000000"
+       textshadowalpha="1.0"
+        />
+        
+
+
+
+	<action name="normalview">
+		tween(view.hlookat, -8.53, 5, easeInOutQuad);
+		tween(view.vlookat, 90, 5, easeInOutQuad);
+		tween(view.fov,     120,  5, easeInOutQuad);
+		tween(view.fisheye, 0.0, 5, easeInOutQuad);
+		wait(3);
+		set(autorotate.enabled, true);
+	</action>
+
+<!-- Autorotate -->
+<autorotate enabled="false"
+            waittime="1.5"
+            accel="1.0"
+            speed="5"
+            horizon="90"
+            tofov="off"
+            />
+
+	<!-- button odak -->
+	<style name="btn"
+		url="%SWFPATH%/plugins/textfield.swf"
+		width="170" height="25" height.mobile="15"  width.mobile="120"
+		align="leftbottom" 
+		x="50" x.mobile="20"
+		children="false"
+		padding="0 0 0 10" padding.mobile="0 0 0 5" 
+		css="color:#FFFFFF; font-family: Arial; font-weight:normal; font-size:11px;"
+		css.mobile="color:#FFFFFF; font-family: Arial; font-weight:bold; font-size:9px;"
+		vcenter="true"
+		backgroundcolor="0x000000" backgroundalpha="0.8" roundedge="5" border="false"
+		shadow="0.1" shadowrange="2" shadowcolor="0xFFFFFF"
+		zorder="10"
+		/>	
+	
+
+	
+<!-- # g1 #  -->
+  <scene name="g1" title="Google Pano" onstart="" thumburl="panos/piyalepasa.tiles/thumb.jpg" lat="" lng="" heading="">
+
+<view hlookat="140" vlookat="-60" fovtype="MFOV" fov="110"  fovmin="80" fovmax="110" maxpixelzoom="1.5" limitview="auto" />
+
+        <preview url="panos/piyalepasa.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/piyalepasa.tiles/pano_%s.jpg" />
+			<cube url="panos/piyalepasa.tiles/mobile/pano_%s.jpg" devices="mobile" />
+		</image>
+		
+
+<!-- <plugin name="tr" url="sg_skin/tr.png" edge="center" align="bottom" x="-80" y="80" onclick="openurl(tr.html,_self);" />
+<plugin name="en" url="sg_skin/en.png" edge="center" align="bottom" x="80" y="80" onclick="openurl(en.html,_self);" /> --> 
+<plugin name="ge" url="sg_skin/google_earth.png"  align="bottomright" x="20" y="20"  handcursor="false" />
+
+<!-- <plugin name="tr" url="sg_skin/tr_mobile.png" scale="1.2" x="-40" y="70" devices="mobile" />
+<plugin name="en" url="sg_skin/en_mobile.png" scale="1.2" x="40"  y="70" devices="mobile" /> -->
+<plugin name="ge" scale="0.7" x="2" y="2" devices="mobile" />
+
+
+<!-- im -->
+<hotspot name="g1"  style="gs"  ath="-151.663" atv="34.708" html="HALİÇ" zorder="1" />
+<hotspot name="g2"  style="gs"  ath="175.748" atv="18.421" html="EMİNÖNÜ" zorder="1" />
+<hotspot name="g3"  style="gs"  ath="109.531" atv="32.832" html="TAKSİM" zorder="1" />
+<hotspot name="g4"  style="gs"  ath="131.342" atv="30.693" html="BEYOĞLU" zorder="1" />
+<hotspot name="g5"  style="gs"  ath="170.295" atv="43.552" html="KASIMPAŞA" zorder="1" />
+<hotspot name="g6"  style="gs"  ath="84.167" atv="18.844" html="BEŞİKTAŞ" zorder="1" />
+<hotspot name="g7"  style="gs"  ath="115.208" atv="10.916" html="ÜSKÜDAR" zorder="1" />
+<hotspot name="g8"  style="gs"  ath="-171.489" atv="26.887" html="Atatürk Köprüsü" zorder="1" />
+<hotspot name="g9"  style="gs"  ath="-88.388" atv="31.742" html="Rahmi Koç[br]Müzesi" zorder="1" />
+<hotspot name="g10"  style="gs"  ath="-69.320" atv="26.328" html="E5" zorder="1" />
+<hotspot name="g11"  style="gs"  ath="-40.466" atv="22.824" html="Miniatürk" zorder="1" />
+<hotspot name="g12"  style="gs"  ath="-35.682" atv="19.382" html="Santral İstanbul" zorder="1" />
+<hotspot name="g13"  style="gs"  ath="-14.590" atv="15.550" html="TEM Bağlantı Yolu" zorder="1" />
+<hotspot name="g14"  style="gs"  ath="-20.425" atv="23.325" html="Kağıthane Tünel Girişi" zorder="1" />
+<hotspot name="g15"  style="gs"  ath="5.268" atv="25.163" html="PERPA" zorder="1" />
+<hotspot name="g16"  style="gs"  ath="0.789" atv="39.855" html="Bomonti Tünel Girişi" zorder="1" />
+<hotspot name="g17"  style="gs"  ath="-4.102" atv="73.775" html="Piyalepaşa Bulvarı" zorder="1" distorted="true" rotate="110" />
+<hotspot name="g18"  style="gs"  ath="-23.752" atv="69.136" html="Piyalepaşa Camii" zorder="1" />
+
+<hotspot name="g19"  style="gs"  ath="169.856" atv="22.140" html="Galata Köprüsü" zorder="1" />
+<hotspot name="g20"  style="gs"  ath="24.788" atv="11.923" html="MASLAK" zorder="1" />
+<hotspot name="g21"  style="gs"  ath="-32.649" atv="16.108" html="Bilgi [br]Üniversitesi" zorder="1" />
+<hotspot name="g22"  style="gs"  ath="88.746" atv="15.501" html="Bahçeşehir [br]Üniversitesi" zorder="1" />
+<hotspot name="g23"  style="gs"  ath="-157.658" atv="26.450" html="Kadir Has [br]Üniversitesi" zorder="1" />
+<hotspot name="g24"  style="gs"  ath="25.831" atv="24.745" html="Bomontiada" zorder="1" />
+<hotspot name="g25"  style="gs"  ath="161.490" atv="37.181" html="Soho House" zorder="1" />
+<hotspot name="g26"  style="gs"  ath="64.545" atv="22.080" html="NİŞANTAŞI" zorder="1" />
+<hotspot name="g27"  style="gs"  ath="155.456" atv="25.358" html="KARAKÖY" zorder="1" />
+
+<hotspot name="g28"  style="gs"  ath="-84.183" atv="24.281" html="Haliç Köprüsü" zorder="1" />
+<hotspot name="g29"  style="gs"  ath="86.363" atv="10.069" html="15 Temmuz [br]Şehitler Köprüsü" zorder="1" />
+<hotspot name="g30"  style="gs"  ath="55.789" atv="5.704" html="Fatih Sultan [br]Mehmet Köprüsü" zorder="1" />
+
+
+        
+<hotspot name="logo" url="sg_skin/google_logo.png" align="bottom" edge="bottom" ath="33.954" atv="87.139" onclick="openurl(tr.html,_self);" zorder="100" renderer="css3d" scale="1"   /> 
+
+<layer name="bt01"  style="btn" y="100" visible="false"  html="Montaj Görünüm" onclick="loadscene(g2, null, MERGE|KEEPVIEW, BLEND(1));"/>
+
+
+</scene>
+
+
+<!-- #piyalepasa-montaj 
+	<scene name="g2" title="piyalepasa-montaj" onstart=""  thumburl="panos/piyalepasa-montaj.tiles/thumb.jpg" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="70" fovmax="120" limitview="auto" />
+
+		<preview url="panos/piyalepasa-montaj.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/piyalepasa-montaj.tiles/pano_%s.jpg" />
+			<cube url="panos/piyalepasa-montaj.tiles/mobile/pano_%s.jpg" devices="mobile" />
+		</image>
+		
+<layer name="bt01"  style="btn" y="100"  html="Normal Görünüm" onclick="loadscene(g1, null, MERGE|KEEPVIEW, BLEND(1));"/>		
+
+	</scene>
+-->
+
+
+
+
+</krpano>

@@ -1,0 +1,248 @@
+
+.contact-menu {
+	.clear;
+	position:fixed;
+	z-index:11;
+	width:25.71rem;
+	right:0;
+	bottom:4.8%;
+	a, span {
+		.right;
+		font-size:1rem;
+		color:@white;
+		line-height:0;
+		padding:0.85rem 1.21rem;
+		box-sizing:border-box;
+		i {
+			.inline-block-middle;
+			font-size:1.3rem;
+			margin-right:0.5rem;
+		}
+
+		&.calllink {
+			background-color:@color-base;
+			border:solid 1px @color-base;
+			white-space:nowrap;
+			&.mobile{
+				display: none;
+			}
+		}
+		&.formlink {
+			background-color:@color-light !important;
+			border-top-left-radius:8px;
+			border-bottom-left-radius:8px;
+			border:solid 1px @color-light;
+			&:hover, &:active {
+				background-color:@white !important;
+				color:@color-base !important;
+			}
+		}
+	}
+}
+
+
+//reklam videoları
+#commerical-videos {
+	.total-center;
+	overflow:hidden;
+	position:fixed;
+	width:0;
+	height:100%;
+	z-index:999;
+	opacity:0;
+	background-color:@color-overlay-purple;
+	.transition-multi(~"width 0.3s ease, opacity 0.5s ease");
+	.wrapper {
+		position:absolute;
+		top:0;left:0;
+		opacity:0;
+		width:100%;
+		height:100%;
+		transition-delay:0.3s;
+		overflow:auto;
+		.transition(opacity,0.3s,ease);
+		.clear;
+		a.close {
+			position:fixed;
+			top:1rem;right:1rem;
+			color:@color-dark;
+			font-size:1.6rem;
+			i {
+				.inline-block-middle;
+				font-size:1.3em;
+			}
+		}
+		ul {
+			width:90%;
+			margin:0 auto;
+			padding-top:3rem;
+			li {
+				.left;
+				width:31.333%;
+				margin:1%;
+				height:25rem;
+				background-color:@white;
+				border-radius:0.5rem;
+				overflow:hidden;
+				> a {
+					.block;
+					.w100;
+					padding:1.428rem;
+					font-size:1.6rem;
+					color:@color-base;
+					position:relative;
+					.text-center;
+					figure {
+						.block;
+						overflow:hidden;
+						border-radius:0.5rem;
+						height:15rem;
+						position:relative;
+						img {.w100;}
+						&:after {
+							.total-center;
+							.inline-block;
+							.icomoon;
+							content:"\e921";
+							font-size:4em;
+							z-index:9;
+							color:@white;
+						}
+					}
+					p {
+						.fontbase-medium;
+						padding:1rem 0;
+						line-height:1.3em;
+					}
+				}
+			}
+		}
+	}
+	&.open {
+		opacity:1;
+		width:100%;
+		.wrapper {
+			opacity:1;
+		}
+	}
+}
+.vid-modal {
+	width:60%;
+	box-sizing:border-box;
+	padding:5rem;
+}
+//-------------------------------------------------------------------------------
+// Footer
+//-------------------------------------------------------------------------------
+footer {
+	.w100;
+	color:@white;
+	background-color:@color-dark;
+	.info-bar {
+		margin-top:0;
+		top:4.571rem;
+		left:83.142rem;
+		width:30.258rem;
+		a {
+			&:first-child {
+				background-color:@color-base;
+				&:hover, &:active {
+					background-color:@white;
+				}
+			}
+			&:last-child {
+				background-color:@color-light;
+			}
+		}
+	}
+	.social-bar {
+		position:absolute;
+		display:inline-block;
+		top:12.642rem;
+		left:84.142rem;
+		font-size:0.857rem;
+		color:@white;
+		a {
+			.inline-block-middle;
+			margin-left:0.3rem;
+			font-size:1.2rem;
+			&:first-child {
+				margin-left:2rem;
+			}
+			opacity:0.8;
+			&:hover, &:active {
+				opacity:1;
+			}
+		}
+	}
+	.copyright-bar {
+		.w100;
+		position:relative;
+		background-color:@color-darker;
+		height:9.357rem;
+		.ppasa-logo {
+			.vertical-center;
+			left:5.3rem;
+			width:6.857rem;
+			img {width:100%;}
+		}
+		.polat-logo {
+			.vertical-center;
+			right:4.574rem;
+			width:6.5rem;
+			img {width:100%;}
+		}
+		.copy {
+			.vertical-center;
+			font-size:0.714rem;
+			left:14.071rem;
+		}
+
+	}
+}
+
+#footer-menu {
+	.clear;
+	background-color:@color-dark;
+	font-size:1.142rem;
+	padding:5.9rem 5.3rem 3.9rem;
+	> ul {
+		.w100;
+		> li {
+			.inline-block;
+			vertical-align:top;
+			min-width:11rem;
+			margin-right:1rem;
+			&:last-child {
+				margin-right:0;
+			}
+			&:nth-child(2){
+				margin-right:1.5rem;
+			}
+			strong {
+				.fontbase-bold;
+				.block;
+					padding-top:0.714rem;
+				&:first-child {
+					padding-top:0;
+					padding-bottom:0.714rem;	
+				}
+			}
+			> ul {
+				> li {
+					a {
+						opacity:0.8;
+						line-height:1.4em;
+						&:hover, &:active {
+							opacity:1;
+						}
+					}
+				}
+			} 
+		}
+	}
+}
+
+
+
+

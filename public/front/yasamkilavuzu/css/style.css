@@ -1,0 +1,112 @@
+*{margin:0; padding:0; border:0; outline:0;}
+
+@font-face {
+                font-family: 'cinzelregular';
+                src: url('../fonts/cinzel-regular.eot');
+                src: url('../fonts/cinzel-regular.eot?#iefix') format('embedded-opentype'),
+                     url('../fonts/cinzel-regular.woff2') format('woff2'),
+                     url('../fonts/cinzel-regular.woff') format('woff'),
+                     url('../fonts/cinzel-regular.ttf') format('truetype'),
+                     url('../fonts/cinzel-regular.svg#cinzelregular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+
+            }
+            .reach_text{width: 160px;height: 40px; line-height:40px; padding-top:0; padding-bottom:0; z-index: 22; display: block;position: absolute;left: 40px;top: 15px;}
+			.reach_text span{position:relative;}
+				.reach_text span span.top_line{position:absolute; height:1px; width:100%; background-image: linear-gradient(to right, #846b4a , #aa9575); top:-5px; left:0;}
+				.reach_text span span.bottom_line{position:absolute; height:1px; width:100%; background-image: linear-gradient(to right, #846b4a , #aa9575); bottom:-5px; left:0;}
+			.reach_text img{height:22px; float:left; margin-right:6px;     margin-top: 6px;}
+			
+            .t1{ transition:all linear .1s; -moz-transition:all linear .1s; -webkit-transition:all linear .1s; -o-transition:all linear .1s; }
+            .t2{ transition:all linear .2s; -moz-transition:all linear .2s; -webkit-transition:all linear .2s; -o-transition:all linear .2s; }
+            .t3{ transition:all linear .3s; -moz-transition:all linear .3s; -webkit-transition:all linear .3s; -o-transition:all linear .3s; }
+            body, html {
+                height:100vh;
+                margin:0; overflow: hidden !important;
+            }
+            *{ box-sizing: border-box; }
+            .formData *{ font-family: 'cinzelregular'; }
+            body{padding-top: 70px;}
+            form{ margin: 0px; }
+            .formData{
+                padding-top: 10px;
+                padding-bottom: 20px;
+                
+                width:100%;
+                height: 70px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+				border-bottom:1px solid #ccc;
+          }
+            .formData input{ height: 40px; background: transparent; position: relative; z-index: 3; border: none; outline: none; color: #434345; width: 100%; border-bottom:1px solid #434345; }
+			
+            .btnData{ position: absolute; z-index: 33; cursor: pointer; bottom:52%; left: 60px; }
+            .btnData.btnData2{ bottom: auto; top: 52%; }
+            .landscape{ display: none; width:100%; height: 100%; background: #231f20 url("images/hide.png") no-repeat center; background-size: contain; position: fixed; z-index: 5555555; left: 0px; top: 0px;}
+            .inputForm{width: 25%;position: relative;float: left;padding-left: 15px;padding-right: 15px;}
+            .inputForm label{transform: translate3d(0,0,0);position: absolute;z-index: 1;padding: 0px 15px;line-height: 52px;left: 0px;top: 0px;color: #434345;font-size: 15px;}
+            .inputForm.active label{ transform: translate3d(0,-10px,0); line-height: 16px; font-size: 10px; text-decoration: underline;  }
+            .inputForm.errorCol label{ color: #000; }
+            .inputForm.errorCol input{ border-color: #000; color: #000; }
+            .clearfix{ clear: both; }
+            .container{ max-width: 1200px; width: 100%; margin:0px auto; height: 40px; }
+            .sendBtn{ line-height: 25px; height:25px; color: #6c5132; background: #FFF; display: block; width: 140px; position:absolute; right:40px; top:27px; cursor: pointer; text-align: center; }
+			.button_top{position:absolute; height:1px; width:100%; background-image: linear-gradient(to right, #846b4a , #aa9575); top:-5px; left:0;}
+			.button_bot{position:absolute; height:1px; width:100%; background-image: linear-gradient(to right, #846b4a , #aa9575); bottom:2px; left:0;}
+            .sendBtn .button_bg{ position:absolute; top:-4px; left:0; width:0; bottom:2px; background-color:#846b4a; z-index:1;}
+            .sendBtn:hover .button_bg{ width:100%;}
+			.button_text{position:relative; z-index:2; margin-top:-3px;     display: inline-block;}
+			.sendBtn:hover  .button_text{color:#fff;}
+            .btnData{ position: absolute; z-index: 33; cursor: pointer; bottom:52%; left: 60px; }
+            .btnData.btnData2{ bottom: auto; top: 52%; }
+            .thanksMessege{ width: 100%; text-align: center; line-height: 40px; color: #000; }
+            .landscape{ display: none; width:100%; height: 100%; background: #231f20 url("../images/hide.png") no-repeat center; background-size: contain; position: fixed; z-index: 5555555; left: 0px; top: 0px;}
+            .closeForm{ display: none; width: 30px; height: 30px; background: #FFF; border-radius: 100%; color: #000; text-align: center; line-height: 30px; font-size: 12px; position: absolute; right: 10px; top: 10px; }
+            .formIcon {
+    width: 80px;
+    height: 80px;
+    z-index: 22;
+    background: url(../images/icon_x.png);
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 13px;
+}
+            /* Portrait */
+            @media screen and (max-width:1400px) and (min-width:1000px) {
+                .formIcon{ left: 30px; }
+                .reach_text{ font-size: 0px; }
+                .container{ max-width: 800px !important; }
+            }
+            @media screen and (max-width:900px) {
+                .closeForm{ display: block; }
+                .formData{ display: none; }
+                .formData .container{ max-width: 500px; height: auto; position: absolute; transform: translate(-50%,-50%); top: 50%; left: 50%; }
+                .sendBtn{ float: none; position: relative; right: auto; left: auto; top: 20px;  margin: 0px auto; clear: both; }
+                .inputForm{ width: 50%; margin-bottom: 30px; }
+                .btnData{ left: 30px; }
+                .btnData img{ max-width: 70px;}
+                .formData{ height: 100%; z-index: 444; background: #FFF; }
+                body{ padding-top: 0px; }
+                .thanksData{ display: block; }
+                .formIcon{
+                           left: 10px;
+                        top: 10px; display: block;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                }
+            }
+            @media screen and (orientation:portrait) {
+               
+               .landscape{ display: block; z-index: 5555; }
+            }
+            /* Landscape */
+            @media screen and (orientation:landscape) {
+               
+            }
+             @media screen and (max-height:920px) {
+                .container{max-width: 1050px;}
+            }

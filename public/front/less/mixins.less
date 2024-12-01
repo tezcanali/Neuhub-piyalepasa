@@ -1,0 +1,97 @@
+.mobile-block-big {display:none !important;}
+.mobile-block-small {display:none !important;}
+.web-block-big {display:block !important;}
+.web-block-small {display:block !important;}
+
+.mobile-inline-block-big {display:none !important;}
+.mobile-inline-block-small {display:none !important;}
+.web-inline-block-big {display:inline-block !important;}
+.web-inline-block-small {display:inline-block !important;}
+
+.mobile-inline-big {display:none !important;}
+.mobile-inline-small {display:none !important;}
+.web-inline-big {display:inline !important;}
+.web-inline-small {display:inline !important;}
+
+.960(){
+	.mobile-block-big {display:block !important;}
+	.web-block-small {display:none !important;}
+
+	.mobile-inline-block-big {display:inline-block !important;}
+	.web-inline-block-small {display:none !important;}
+
+	.mobile-inline-big {display:inline !important;}
+	.web-inline-small {display:none !important;}
+}
+.640(){
+	.mobile-block-small {display:block !important;}
+	.web-block-big {display:none !important;}
+
+	.mobile-inline-block-small {display:inline-block !important;}
+	.web-inline-block-big {display:none !important;}
+
+	.mobile-inline-small {display:inline !important;}
+	.web-inline-big {display:none !important;}
+}
+
+//input placeholder renklerini belirler
+.set-placeholder-color(@color){
+	::-webkit-input-placeholder {color:@color;}
+	:-moz-placeholder {color:@color;opacity:1;}
+	::-moz-placeholder {color:@color;opacity:1;}
+	:-ms-input-placeholder {color:@color;}
+}
+
+//font face üretir
+.generate-font-face(@font-name, @font-file-name) {
+	@font-face {
+		font-family:@font-name;
+		src: url('../fonts/@{font-file-name}.eot');
+		src: url('../fonts/@{font-file-name}.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/@{font-file-name}.woff') format('woff'),
+			url('../fonts/@{font-file-name}.ttf') format('truetype'),
+			url('../fonts/@{font-file-name}.svg#@{font-file-name}') format('svg');
+		font-weight: 400;
+		font-style: normal;
+		font-stretch: normal;
+		unicode-range: U+0020-2248;
+	}
+}
+
+//hover, fokus ve mobil(aktif) için ayrı ayrı renk belirler
+.set-hover-color(@hover-color, @focus-color, @active-color){
+	&:hover {
+		color:@hover-color;
+	}
+	&:focus {
+		color:@focus-color;
+	}
+	&:active {
+		color:@active-color;
+	}
+}
+
+//hover ve mobil(aktif) için tek renk belirler
+.set-hover-color-basic(@hover-color){
+	&:hover, &:active {
+		color:@hover-color;
+	}
+}
+
+//transition işleri
+.transition(@prop, @duration, @ease) {
+	-webkit-transition: @prop @duration @ease;
+			transition: @prop @duration @ease;
+}
+.transition-multi(@prop) {
+	-webkit-transition: @prop;
+			transition: @prop;
+}
+
+//transform işleri
+.free-transform(@transform) {
+	-webkit-transform: @transform;
+		-ms-transform: @transform;
+			transform: @transform;
+}
+

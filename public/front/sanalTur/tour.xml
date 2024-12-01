@@ -1,0 +1,176 @@
+﻿<krpano version="1.19" title="">
+
+<!-- 
+====================================================
+Copyright © 2018 Online Bilişim Hizmetleri
+www.sanalgezinti.com |  www.sanalgezinti.net
+====================================================
+-->
+
+<!-- 
+<plugin name="options" url="plugins/options.swf" keep="true" />
+<plugin name="coor" url="plugins/coor.png" keep="true" align="center" edge="center" handcursor="false" />
+-->
+
+
+	<include url="plugins/loadingbar.xml" />
+	<include url="plugins/showtext.xml" />
+	<include url="sg_skin/vtourskin.xml" />
+	<include url="plan/plan.xml" /> 
+
+
+
+	<!-- #startup  -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+		
+	 if(device.desktop, 
+      //delayedcall(5, rotatestart());
+		);
+		
+	</action>
+
+	<!-- COMBOBOX 
+		<include url="plugins/combobox.xml" />
+	<combobox name="cbscenes" design="vtour" align="centertop" x="0" y="10" onloaded="add_scene_items();" />
+	<action name="add_scene_items" scope="local">
+		for(set(i,0), i LT scene.count, inc(i),
+			caller.additem(calc('[img src=[dq]' + scene[get(i)].thumburl +  '[dq] style=[dq]border:1px solid rgba(255,255,255,0.5);width:48px;height:32px;vertical-align:middle;margin-right:8px;[dq]/] '+scene[get(i)].title), calc('loadscene('+i+',null,MERGE,BLEND(0.5))') );
+		);
+	</action>
+ -->
+ 
+ 
+	<!-- Logo -->
+	<layer name="logo" url="sg_skin/logo.png" keep="true" align="lefttop" x="10" y="10" alpha="1" scale="1" scale.mobile=".5"   handcursor="false"    />
+
+
+<style name="door_open" url="sg_skin/door_open.png" edge="bottom" zorder="10" 
+onhover="showtext('AÇ',zt);tween(scale,0.6 ,0.3);" onout="tween(scale, 0.5 ,0.3);"
+onhover.mobile="tween(scale,0.5 ,0.3);" onout.mobile="tween(scale,0.4 ,0.3);"
+scale="0.5" scale.mobile="0.4"   />
+
+<style name="door_close" url="sg_skin/door_close.png" edge="bottom" zorder="10" 
+onhover="showtext('KAPAT',zt);tween(scale,0.6 ,0.3);" onout="tween(scale, 0.5 ,0.3);"
+onhover.mobile="tween(scale,0.5 ,0.3);" onout.mobile="tween(scale,0.4 ,0.3);"
+scale="0.5" scale.mobile="0.4"   />
+
+
+<!-- ==================================== #SCENES ======================================= -->
+	
+<!-- #ma -->
+	<scene name="ma" title="Salon + Mutfak" onstart="activatespot(p3, 267.12);"  thumburl="panos/ma.tiles/thumb.jpg" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="70" fovmax="120" limitview="auto" />
+
+		<preview url="panos/ma.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/ma.tiles/pano_%s.jpg" />
+			<cube url="panos/ma.tiles/mobile/pano_%s.jpg" devices="mobile" />
+		</image>
+		
+    <hotspot name="bt-1"  style="door_close" ath="-38.409" atv="19.267" onclick="loadscene(ya, null, MERGE|KEEPVIEW, BLEND(1));" />
+    <hotspot name="bt-2"  style="door_open" ath="30.145" atv="22.065" onclick="loadscene(ya, null, MERGE|KEEPVIEW, BLEND(1));" />
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-84.096" atv="22.765" distorted="false" zoom="false" linkedscene="antre" />
+		
+
+	</scene>
+
+
+<!-- #ya -->
+	<scene name="ya" title="Salon + Mutfak" onstart="activatespot(p3, 267.12);"  thumburl="panos/ya.tiles/thumb.jpg" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="70" fovmax="120" limitview="auto" />
+
+		<preview url="panos/ya.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/ya.tiles/pano_%s.jpg" />
+			<cube url="panos/ya.tiles/mobile/pano_%s.jpg" devices="mobile" />
+		</image>
+	
+			<hotspot name="bt-1"  style="door_open" ath="-47.118" atv="14.557" onclick="loadscene(ma, null, MERGE|KEEPVIEW, BLEND(1));" />
+	    <hotspot name="bt-2"  style="door_close" ath="28.600" atv="16.944" onclick="loadscene(ma, null, MERGE|KEEPVIEW, BLEND(1));" />
+      
+      <hotspot name="spot1" style="skin_hotspotstyle" ath="-84.096" atv="22.765" distorted="false" zoom="false" linkedscene="antre" />
+
+	</scene>
+
+
+	
+	
+	
+<!-- #antre -->
+	<scene name="antre" title="Antre" onstart="activatespot(p1, 0);"  thumburl="panos/antre.tiles/thumb.jpg" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="70" fovmax="120" limitview="auto" />
+
+		<preview url="panos/antre.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/antre.tiles/pano_%s.jpg" />
+			<cube url="panos/antre.tiles/mobile/pano_%s.jpg" devices="mobile" />
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="5.573" atv="18.406" distorted="false" zoom="false" linkedscene="ma" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-103.933" atv="1.492" distorted="false" zoom="false" linkedscene="banyo" />
+		
+		
+
+	</scene>
+
+<!-- #banyo -->
+	<scene name="banyo" title="Banyo" onstart="activatespot(p2, 0);"  thumburl="panos/banyo.tiles/thumb.jpg" >
+
+		<view hlookat="-0.324" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="1.5" fovmin="70" fovmax="120" limitview="auto" />
+
+		<preview url="panos/banyo.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/banyo.tiles/pano_%s.jpg" />
+			<cube url="panos/banyo.tiles/mobile/pano_%s.jpg" devices="mobile" />
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="87.909" atv="3.352" distorted="false" zoom="false" linkedscene="antre" />
+		
+		
+
+	</scene>
+
+
+
+
+<!-- #salon-c 
+	<scene name="salon-c" title="Salon + Mutfak (C)" onstart="activatespot(p3, 210);"  thumburl="panos/salon-c.tiles/thumb.jpg" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="70" fovmax="120" limitview="auto" />
+
+		<preview url="panos/salon-c.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/salon-c.tiles/pano_%s.jpg" />
+			<cube url="panos/salon-c.tiles/mobile/pano_%s.jpg" devices="mobile" />
+		</image>
+	</scene>
+	
+	-->
+
+<!-- #salon-d 
+	<scene name="salon-d" title="Salon + Mutfak (D)" onstart="activatespot(p3, -68.89);"  thumburl="panos/salon-d.tiles/thumb.jpg" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="70" fovmax="120" limitview="auto" />
+
+		<preview url="panos/salon-d.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/salon-d.tiles/pano_%s.jpg" />
+			<cube url="panos/salon-d.tiles/mobile/pano_%s.jpg" devices="mobile" />
+		</image>
+		
+	</scene>
+
+-->
+
+</krpano>
