@@ -59,7 +59,7 @@ class RightImageText extends PageBlock
                     ->label('Vurgulanan Metin 1')
                     ->columnSpan(6),
 
-                TextInput::make('suntitle')
+                TextInput::make('subtitle')
                     ->label('Alt Başlık')
                     ->columnSpan(6),
 
