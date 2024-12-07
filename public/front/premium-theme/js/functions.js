@@ -40,28 +40,28 @@ function loadVideos(){
 
 const initialiseStyleBackgroundIntersectionObserver = () => {
     const lazyBackgrounds = Array.from(document.querySelectorAll('[data-background-image]'));
-
+  
     if (lazyBackgrounds.length === 0) {
       return;
     }
-
+  
     let lazyBackgroundObserver;
-
+  
     const loadBackgroundIfElementOnScreen = (entry) => {
       if (entry.isIntersecting) {
         entry.target.style.backgroundImage = `url('${entry.target.dataset.backgroundImage}')`;
         lazyBackgroundObserver.unobserve(entry.target);
       }
     };
-
+  
     const observeElementVisibility = (lazyBackground) => {
       lazyBackgroundObserver.observe(lazyBackground);
     };
-
+  
     const setBackground = (element) => {
       element.style.backgroundImage = `url('${entry.target.dataset.backgroundImage}')`;
     };
-
+  
     if (typeof window.IntersectionObserver === 'function') {
       lazyBackgroundObserver = new IntersectionObserver((entries) => {
         entries.forEach(loadBackgroundIfElementOnScreen);
@@ -75,7 +75,7 @@ const initialiseStyleBackgroundIntersectionObserver = () => {
 
 function loadImages(){
     var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
+  
     if ("IntersectionObserver" in window) {
       let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
@@ -88,7 +88,7 @@ function loadImages(){
           }
         });
       });
-
+  
       lazyImages.forEach(function(lazyImage) {
         lazyImageObserver.observe(lazyImage);
       });
@@ -121,7 +121,7 @@ function nextLetterInAlphabet(c) {
 }
 
 function resizer(){
-    wW = $(window).width();
+    wW = $(window).width();  
 }
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -129,7 +129,7 @@ function getParameterByName(name) {
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-
+    
 $(document).ready(function () {
     if(getParameterByName('utm_source')!=null && getParameterByName('utm_source')!=""){
         $('#utm_source').val(getParameterByName('utm_source'));
@@ -166,8 +166,8 @@ $(document).ready(function () {
         return false;
     });
 
-
-
+    
+    
 
     resizer();
     call_livechat();
@@ -201,7 +201,7 @@ $(document).ready(function () {
 
     var owl6 = $('.gallerySlider');
     owl6.owlCarousel({ smartSpeed: 700, loop: true, margin: 0, autoplay:false,responsiveClass: true, nav:true, dots:true, items: 1, thumbs: false, thumbImage: false,lazyLoad:true, thumbContainerClass: 'owl-thumbs', thumbItemClass: 'owl-thumb-item', responsive: { 0: {}, 780:{} }});
-
+    
 
     $('.planCategory a').click(function(event) {
         $this = $(this);
@@ -229,7 +229,7 @@ $(document).ready(function () {
 
         }
         return false;
-    });
+    });    
 
 
     $('.resendSuccess').click(function(){
@@ -264,17 +264,17 @@ $(document).ready(function () {
 
 
 $(function () {
-
+    
     var activeIndex = $('.active-tab').index(),
         $contentlis = $('.tabs-content .tabs'),
         $tabslis = $('.tabsBtn a');
-
+    
     $contentlis.eq(activeIndex).show();
-
+  
     $('.tabsBtn').on('click', 'a' , function (e) {
       var $current = $(e.currentTarget),
           index = $current.index();
-
+      
       $tabslis.removeClass('active-tab');
       $current.addClass('active-tab');
       $contentlis.hide().eq(index).show();
@@ -325,7 +325,7 @@ $(function(){
             autoPlaceholder: true,
             numberType: "MOBILE",
             formatOnInit: true,
-            utilsScript: "/front/premium-theme/js/form/intl-tel-input/js/utils.js",// "/assets/js/form/intl-tel-input/js/utils.js",
+            utilsScript: "/assets/premium-theme/js/form/intl-tel-input/js/utils.js",// "/assets/js/form/intl-tel-input/js/utils.js",
             initialCountry: 'tr',
             nationalMode: true,
             separateDialCode: true,
@@ -418,7 +418,7 @@ $(function(){
                         $('.codeFormData input[name="dataId"]').val(data.dataId);
                     }
                 })
-                return;
+                return;         
         },
         invalidHandler: function(form, validator) {
             var errors = validator.numberOfInvalids();
