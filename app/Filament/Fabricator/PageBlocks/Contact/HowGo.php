@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Filament\Fabricator\PageBlocks\Global;
+namespace App\Filament\Fabricator\PageBlocks\Contact;
 
 use Filament\Forms\Components\Builder\Block;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
-class VideoList extends PageBlock
+class HowGo extends PageBlock
 {
     public static function getBlockSchema(): Block
     {
-        return Block::make('global.video-list')
+        return Block::make('contact.how-go')
             ->schema([
                 //
-            ]);
+            ])->visible(fn ($get) => $get('../layout') == 'contact');
     }
 
     public static function mutateData(array $data): array

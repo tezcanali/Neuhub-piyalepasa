@@ -8,30 +8,30 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
-class ProjeGallery extends PageBlock
+class VideoGallery extends PageBlock
 {
     public static function getBlockSchema(): Block
     {
-        return Block::make('global.proje-gallery')
+        return Block::make('global.video-gallery')
             ->schema([
                 TextInput::make('title')
-                    ->label('Başlık'),
-                Repeater::make('images')
-                ->label('Galeri')
+                ->label('Başlık'),
+                Repeater::make('galleries')
+                ->label('Video Galeri')
                 ->schema([
                     FileUpload::make('image')
-                        ->label('Görsel')
+                        ->label('Kapak Görseli')
                         ->image()
                         ->required()
                         ->disk('public')
-                        ->directory('global/gallery')
+                        ->directory('global/video-gallery')
                         ->optimize('webp')
                         ->deletable(true)
-                        ->acceptedFileTypes(['image/*'])
-                        ->columnSpan(6),
-                    TextInput::make('alt_tag')
-                    ->label('Image Alt Tag')
-                        ->columnSpan(6),
+                        ->acceptedFileTypes(['image/*']),
+                    TextInput::make('title')
+                        ->label('Başlık'),
+                    TextInput::make('url')
+                        ->label('Video URL'),
                 ])
                 ->collapsible()
                 ->collapsed()
