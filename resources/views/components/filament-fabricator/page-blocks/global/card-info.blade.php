@@ -50,3 +50,8 @@
         </div>
     </div>
 </section>
+@if($style)
+    <style>
+        {!! $style !!}
+    </style>
+@endif

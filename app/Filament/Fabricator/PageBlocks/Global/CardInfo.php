@@ -6,6 +6,7 @@ use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Repeater;
@@ -134,6 +135,9 @@ class CardInfo extends PageBlock
                                     ->label('Özel CSS Stilleri')
                                     ->placeholder('background-color: #fff;')
                                     ->columnSpan(2),
+                                Textarea::make('style')
+                                    ->label('Özel CSS Kodu')
+                                    ->columnSpan(6)
                             ])
                             ->columns(6),
                     ])
