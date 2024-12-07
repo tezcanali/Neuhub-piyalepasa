@@ -54,6 +54,8 @@
 
     {{ \Filament\Facades\Filament::renderHook('filament-fabricator.head.end') }}
 
+    <script src="{{asset('front/js/lib/jquery-2.2.4.min.js')}}"></script>
+
     <style>
         @media screen and (max-width: 780px) {
             .slider-1 {
@@ -112,7 +114,6 @@
 
 @include('front.layout.footer')
 
-<script src="{{asset('front/js/lib/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('front/intl-tel-input/js/intlTelInput.min.js')}}"></script>
 <script src="{{asset('front/js/plugins/jquery.validate.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"

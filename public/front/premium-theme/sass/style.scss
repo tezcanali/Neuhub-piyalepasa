@@ -112,11 +112,11 @@ $max_width: 1920px;
      top:50%; left: 50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);
 }
 
-@function percentageGenerator($totalCol, $col) {  
- @return ((100% / $totalCol)*$col);  
+@function percentageGenerator($totalCol, $col) {
+ @return ((100% / $totalCol)*$col);
 }
 
-@function strip-unit($value) { 
+@function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
 
@@ -132,7 +132,7 @@ $max_width: 1920px;
   background-color:$bg;
   box-shadow: -20px -20px 40px $shadowFirst,
         20px 20px 40px $shadowSecond;
-} 
+}
 
 @mixin clearFix(){
     display: block; width: 100%; height: 0; clear: both; content: "";
@@ -151,7 +151,7 @@ a, a img{ text-decoration:none; outline:none; border:none;}
 :-moz-placeholder {color:#707070;}
 ::-moz-placeholder {color:#707070;}
 :-ms-input-placeholder {color:#707070;}
-::selection {background: #1691CE; color:#fff;} 
+::selection {background: #1691CE; color:#fff;}
 ::-moz-selection {background: #1691CE;  color:#fff;}
 
 /*General Elements */
@@ -180,14 +180,14 @@ a, a img{ text-decoration:none; outline:none; border:none;}
         &.searchIco{background-image:url(../images/icons/search.svg); width:17px; height:17px;}
     }
 
-    .arrowBtn{float:left; line-height: 70px; position:relative;background:$textColor; width:270px; height:70px; 
+    .arrowBtn{float:left; line-height: 70px; position:relative;background:$textColor; width:270px; height:70px;
         span{ position:relative; z-index:2; color:#BFA474; font-size:13px;font-weight: bold; letter-spacing:1.5px; display:block; @include easing(0.3s);background:url(../images/icons/goldArrow.svg) no-repeat right 30px center; background-repeat:no-repeat; line-height:70px;padding-left:30px;text-align: left;}
         &:before{width:0px; height:70px;  display:block; content:""; position:absolute; left:0; top:0; @include easing(0.3s); background-color:#BFA474; }
-        
+
         &:hover{
-           span{color:$textColor; background: url(../images/icons/purpleArrow.svg) no-repeat right 25px center;} 
+           span{color:$textColor; background: url(../images/icons/purpleArrow.svg) no-repeat right 25px center;}
            &:before{width:100%;}
-        }    
+        }
     }
 
     .row{ @include FlexBox(); height:100%;
@@ -195,23 +195,23 @@ a, a img{ text-decoration:none; outline:none; border:none;}
             &.col-1{width:12.5%;}
             &.col-2{width:25%;}
             &.col-3{width:37.5%;}
-            &.col-4{width:50%;} 
+            &.col-4{width:50%;}
             &.col-5{width:62.5%;}
             &.col-6{width:75%;}
             &.col-7{width:27.5%;}
-            &.col-8{width:100%;} 
+            &.col-8{width:100%;}
             &.col-9{width:35%;}
             &.col-10{width:65%;}
         }
         &.j-center{justify-content:center;}
     }
 
-    .rowSixCol{ @include FlexBox(); height:100%; 
+    .rowSixCol{ @include FlexBox(); height:100%;
         .col{flex:0 0 auto; width:33.3333%;
             &.col-1{width:16.666666666666666666666666666667%;}
             &.col-2{width:33.3%;}
             &.col-3{width:50%;}
-            &.col-4{width:66.666666666666666666666666666667%;} 
+            &.col-4{width:66.666666666666666666666666666667%;}
             &.col-5{width:83.3%;}
             &.col-6{width:100%;}
         }
@@ -221,12 +221,12 @@ a, a img{ text-decoration:none; outline:none; border:none;}
     .pad{padding:100px;}
 
     .h10{height:10%;}
-    .h20{height:20%;} 
+    .h20{height:20%;}
     .h30{height:30%;}
     .h40{height:40%;}
     .h50{height:50%;}
     .h60{height:60%;}
-    .h70{height:70%;} 
+    .h70{height:70%;}
     .h80{height:80%;}
     .h90{height:90%;}
     .h100{height:100%;}
@@ -257,14 +257,14 @@ a, a img{ text-decoration:none; outline:none; border:none;}
             &:after{ width:2px; height: 1px; background: #fff; display: block; content: ""; position: absolute; top:5px; left: 45%; -webkit-animation: mainArrowAnim 1s infinite; /* Safari 4+ */ -moz-animation: mainArrowAnim 1s infinite; /* Fx 5+ */ -o-animation: mainArrowAnim 1s infinite; /* Opera 12+ */ animation: mainArrowAnim 1s infinite; }
         }
         small{position:absolute; color:#fff; position: absolute; top:40px; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%);-moz-transform:translateX(-50%); font-size:14px;}
-        
+
     }
 
     @-webkit-keyframes mainArrowAnim {0% {height: 0px;}50% {height: 10px;}100% {height: 0px;}}
     @-moz-keyframes mainArrowAnim {0% {height: 0px;}50% {height: 10px;}100% {height: 0px;}}
     @-o-keyframes mainArrowAnim {0% {height: 0px;}50% {height: 10px;}100% {height: 0px;}}
     @keyframes mainArrowAnim {0% {height: 0px;}50% {height: 10px;}100% {height: 0px;}}
-   
+
 /*General Elements */
 
 aside{position:fixed; width:140px; height: 100%; height:calc(100vh - 120px); bottom:0; right:0; background:#fff; z-index: 6;
@@ -274,7 +274,7 @@ aside{position:fixed; width:140px; height: 100%; height:calc(100vh - 120px); bot
             span{display:block; width:100%; position:relative; z-index: 2;}
             small{display:block; width:100%; position:relative; z-index: 2;}
             &:before{display:block; width: 100%; height: 0; @include easing(0.6s); top:0; left:0; position:absolute; background:#BFA474; content:"";}
-            &:hover, &.selected{ 
+            &:hover, &.selected{
                 &:before{height:100%;}
                 img{filter: brightness(50%);}
             }
@@ -307,7 +307,7 @@ header{  position:fixed; top:0; left:0; z-index: 5; width:100%; @include easing(
                     img{display:block; width: 100%; position: absolute; @include centerIt(); @include easing(0.3s); max-width:none;}
                     &:before{content:"\eca6"; color:#fff; position: absolute; @include centerIt(); font-size:60px; z-index: 2;}
                     &:hover{
-                        img{width:110%;} 
+                        img{width:110%;}
                     }
                 }
 
@@ -319,7 +319,7 @@ header{  position:fixed; top:0; left:0; z-index: 5; width:100%; @include easing(
 
         /*ul{ height:100%; @include FlexBox(); align-items: center;
             li{@include FlexBox(); align-items: center;  @include easing(0.3s);
-                a{color:#220728; font-weight:bold; font-size:15px;display:block; padding:0 30px;} 
+                a{color:#220728; font-weight:bold; font-size:15px;display:block; padding:0 30px;}
                 &:hover{
                     a{opacity:1;}
                 }
@@ -349,7 +349,7 @@ header{  position:fixed; top:0; left:0; z-index: 5; width:100%; @include easing(
             span{display:block; width:100%; position:relative; z-index: 2;}
             small{display:block; width:100%; position:relative; z-index: 2;}
             &:before{display:block; width: 100%; height: 0; @include easing(0.6s); top:0; left:0; position:absolute; background:#BFA474; content:"";}
-            &:hover, &.selected{ 
+            &:hover, &.selected{
                 &:before{height:100%;}
                 img{filter: brightness(50%);}
             }
@@ -409,7 +409,7 @@ section.mainSlider{width:100%; height:100%; height:100vh; background:#666; margi
                 &:before{ content:"\eab5"; }
             }
             &.owl-next{
-                &:before{ content:"\eab8"; }                
+                &:before{ content:"\eab8"; }
             }
             &:hover{background-color:#BFA474!important;
                 &:before{color:#220728;}
@@ -418,7 +418,7 @@ section.mainSlider{width:100%; height:100%; height:100vh; background:#666; margi
         }
     }
 
-    .owl-dots{position:absolute; bottom:90px; width:70px; right:300px; 
+    .owl-dots{position:absolute; bottom:90px; width:70px; right:300px;
         .owl-dot{ width:100%; display:block; width:15px; height:15px; position: relative; float: left;
             span{display:block; position: absolute; @include centerIt(); background: #fff; width:6px; height: 6px; @include rounded(100%);@include easing(0.3s);}
             &.active{ background:none;
@@ -428,7 +428,7 @@ section.mainSlider{width:100%; height:100%; height:100vh; background:#666; margi
     }
 
     a.scroll{left:50%; bottom:60px;}
-} 
+}
 
 section.teaser{padding-top:150px!important;}
 
@@ -467,7 +467,7 @@ section.about{
             &:before{ content:"\eab5"; }
         }
         a.aNext{top:50%; margin-top: -25px; right: 5%;
-            &:before{ content:"\eab8"; }   
+            &:before{ content:"\eab8"; }
         }
 
         ul{@include FlexBox(); width: 60%; margin:auto; justify-content: space-between;
@@ -578,7 +578,7 @@ footer{ background: #220728; padding:100px 230px 50px 140px;
     #footer-menu{padding:0; background:none;
         ul{
             li{
-                strong{font-size:14px; font-family: 'Roboto'; font-weight:bold;} 
+                strong{font-size:14px; font-family: 'Roboto'; font-weight:bold;}
                 ul{
                     li{
                         a{font-size:11px; opacity:.6;
@@ -616,7 +616,7 @@ footer{ background: #220728; padding:100px 230px 50px 140px;
     &.opened{right:160px;}
 }
 
-/* Forms */ 
+/* Forms */
     .codeFormData{display: none; width: 100%; height: 100%; background:#FFF; position: absolute; width: 100%; height: 100%; z-index: 5555; padding: 15px; left: 0px; top: 0px; border-radius: 0.5rem; box-sizing: border-box; z-index:5;}
     .formContent { padding-bottom:30px; position:relative;
         .fRow {width:100%; clear:both; margin-top:10px;
@@ -633,7 +633,7 @@ footer{ background: #220728; padding:100px 230px 50px 140px;
                         &:-moz-placeholder {color:#220728;}
                         &::-moz-placeholder {color:#220728;}
                         &:-ms-input-placeholder {color:#220728;}
-                        &:focus{border-color:#220728;@include easing(0.5s);box-shadow: 0px 0px 17px 1px rgba(194,194,194,1);} 
+                        &:focus{border-color:#220728;@include easing(0.5s);box-shadow: 0px 0px 17px 1px rgba(194,194,194,1);}
                         &.error{border:1px solid #f00!important;}
                         &.hidden{display:none;}
                     }
@@ -648,7 +648,7 @@ footer{ background: #220728; padding:100px 230px 50px 140px;
                     &.error{
                         .intl-tel-input{@include rounded(5px);border:1px solid #f00 !important;}
                     }
-                    
+
                 }
                 #send_button, #verifyDataBtn{display:inline-block; height:100%; background:#BFA474 url(../images/icons/submit.svg) no-repeat 85% center; @include rounded(5px); color:#fff; font-size:13px; font-weight:bold;border:none; padding:0 80px 0 35px; @include easing(0.3s); cursor:pointer;
                     &:hover{background:#856E43 url(../images/icons/submit.svg) no-repeat 90% center;}
@@ -664,7 +664,7 @@ footer{ background: #220728; padding:100px 230px 50px 140px;
                            &:before {transform: scale(0);}
                          }
                        }
-                } 
+                }
                  &:checked {
                    + {
                      label {
@@ -672,10 +672,10 @@ footer{ background: #220728; padding:100px 230px 50px 140px;
                      }
                    }
                  }
-           
+
              }
         }
-        
+
     }
 /* Forms*/
 
@@ -737,11 +737,11 @@ footer{ background: #220728; padding:100px 230px 50px 140px;
 }
 
 @media screen and (max-width:1400px){
-    
+
 }
 
 @media screen and (max-width:1050px){
- 
+
 }
 
 @media screen and (max-width:780px){
@@ -871,7 +871,7 @@ MessageBox - A jQuery Plugin to replace Javascript's window.alert(), window.conf
     Documentation   : http://gasparesganga.com/labs/jquery-message-box/
 ***********************************************************************************************************************/
 /*
-    You can customize your MessageBox style directly in this file 
+    You can customize your MessageBox style directly in this file
     or override some classes/styles using an external CSS file loaded after this.
 */
 
@@ -910,7 +910,7 @@ MessageBox - A jQuery Plugin to replace Javascript's window.alert(), window.conf
         flex    : 0 0 auto;
         height  : 20px;     /* Use this value as if it was #messagebox_content's "padding-bottom" to preserve it when the content overflows Y-axis and the scrollbar is shown */
     }
- 
+
 /* Input's Label */
 .messagebox_content_label {
     display     : block;
@@ -942,12 +942,12 @@ MessageBox - A jQuery Plugin to replace Javascript's window.alert(), window.conf
         border-color    : #707070;
         box-shadow      : inset 0px 0px 3px #ffd540;
     }
-    
+
     /* Input's style when placed inside a label */
     .messagebox_content_label .messagebox_content_input {
         margin-top  : 4px;
     }
-    
+
     /* Select's "fake placeholder" */
     .messagebox_content_input_selectplaceholder {
         color   : #909090;
