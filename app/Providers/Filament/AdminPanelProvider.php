@@ -73,7 +73,6 @@ class AdminPanelProvider extends PanelProvider
                 FilamentMenuBuilderPlugin::make()
                     ->addLocations([
                         'header' => 'Header',
-                        'mobil_header' => 'Mobil Header',
                         'footer' => 'Footer',
                     ]),
                 FilamentTranslatableFieldsPlugin::make()

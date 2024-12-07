@@ -1,140 +1,52 @@
+@php
+    use Datlechin\FilamentMenuBuilder\Models\Menu;
+        $web_menu = Menu::location('header');
+        $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
+@endphp
 <footer class="section no-height">
     <nav id="footer-menu">
         <ul>
-            <li><a href="./"><strong>Anasayfa</strong></a>
-            </li>
-
-            </li>
-            <li>
-                <strong>Hakkımızda</strong>
-                <ul>
-                    <li><a href="./hakkimizda.html" title="Polat Hakkında">Polat
-                            Hakkında</a></li>
-                    <li><a href="./hakkimizda.html" title="Hikayemiz">Hikayemiz</a></li>
-                    <li><a href="./hakkimizda.html#odullerimiz/"
-                           title="&Ouml;d&uuml;llerimiz">&Ouml;d&uuml;llerimiz</a></li>
-                </ul>
-            </li>
-            <li>
-                <strong>Proje</strong>
-                <ul>
-                    <li><a href="./konut.html" title="Konutlar">Konutlar</a></li>
-                    <li><a href="./ofis.html" title="Ofisler">Ofisler</a></li>
-                    <li><a href="./otel.html.html" title="Otel">Otel</a></li>
-                    <li><a href="https://polatpiyalepasacarsi.com//" title="Mağazalar">Mağazalar</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <strong>&Ouml;rnek Daireler</strong>
-                <ul>
-                    <li><a href="./ornek-daireler.html">Galeri</a></li>
-                    <li><a href="./ornek-daireler.html#sanaltur">Sanal Turlar</a></li>
-                    <!--<li><a href="./ornek-daireler.html#galery-1plus0" title="1+0">1+0</a></li>
-<li><a href="./ornek-daireler.html#galery-1plus1" title="1+1">1+1</a></li>
-<li><a href="./ornek-daireler.html#galery-3plus1" title="3+1">3+1</a></li>-->
-                </ul>
-            </li>
-
-            <li>
-                <strong>Hizmetler</strong>
-                <ul>
-                    <li><a class="overlay_none" href="./hizmetler.html">Satış Sonrası
-                            Hizmetler</a></li>
-                    <li><a class="overlay_none" href="./hizmetler.html#ikinci-el/">İkinci El
-                            Satış ve Kiralama</a></li>
-                    <li><a class="overlay_none"
-                           href="./hizmetler.html#musteri-hizmetleri2/">M&uuml;şteri
-                            Hizmetleri</a></li>
-                    <li><a class="overlay_none" href="./hizmetler.html#polat-yonetim">Polat
-                            Y&ouml;netim</a></li>
-                    <li><a class="overlay_none"
-                           href="./hizmetler.html#piyalepasa-yonetim">Piyalepaşa
-                            Y&ouml;netim</a></li>
-                </ul>
-            </li>
-            <li>
-                <strong>Haberler</strong>
-                <ul>
-
-                    <li><a href="./haberler.html" title="Bizden Haberler">Bizden Haberler</a>
+            @foreach($web_menu->menuItems as $item)
+                @if($item->children->isNotEmpty())
+                    <li>
+                        <strong>{{ $item->title }}</strong>
+                        <ul>
+                            @foreach($item->children as $child)
+                                <li>
+                                    <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
                     </li>
+                @else
+                    <li>
+                        <a href="{{ $item->url }}"><strong>{{ $item->title }}</strong></a>
+                    </li>
+                @endif
+            @endforeach
 
-                    <li><a href="./haberler.html#proje-fotograflari"
-                           title="Proje Fotoğrafları">Proje Fotoğrafları</a></li>
-                </ul>
-            </li>
-            <li>
-                <strong>Basın</strong>
-                <ul>
-                    <li><a href="./basin.html#basin-bultenleri"
-                           title="Basın Bültenleri">Basın Bültenleri</a></li>
-
-                    <li><a href="./basin.html#gorsel-malzemeler"
-                           title="G&ouml;rsel Malzemeler">G&ouml;rsel Malzemeler</a></li>
-                    <li><a href="./basin.html#reklamlarimiz" title="Reklam Filmlerimiz">
-                            Reklam Filmlerimiz
-                        </a></li>
-                    <!--<li><a href="./basin.html#basindan-haberler" title="Basın B&uuml;ltenleri">Basın B&uuml;ltenleri</a></li>-->
-                    <li style="display:none;"><a href="./basin.html#reklamlarimiz"
-                                                 title="Reklamlarımız">Reklamlarımız</a></li>
-                </ul>
-            </li>
-            <li>
-                <strong>İletişim</strong>
-                <ul>
-                    <li><a href="./iletisim.html#nasil-giderim" title="Nasıl Giderim?<">Nasıl
-                            Giderim?</a></li>
-                    <li><a href="./iletisim.html" title="Nasıl Giderim?<">Lokasyon</a></li>
-                    <li><a href="./iletisim.html#iletisim-formu" title="Bize Ulaşın">Bize
-                            Ulaşın</a></li>
-                </ul>
-            </li>
         </ul>
     </nav>
     <div class="contact-menu" style="display: none;">
-        <!--<span class="w50 calllink desktop"><i class="icon-phone"></i>0850 622 04 04 </span>-->
-        <!-- <a class="w50 calllink mobile" href="tel:+908506220404"><i class="icon-phone"></i>0850 622 04 04 </a>
-<a href="#talep-formu" class="w50 modal-open formlink"><i class="icon-list"></i>TALEP FORMU         </a> -->
-        <!-- <a class="whatsapp_link" style="position: absolute; left: -70px; z-index: 333; bottom: -5px;" target="_blank" href="https://api.whatsapp.com/send?phone=905334257475&text="><img src=".front/images/whatsapp.png" class="center-block" style="height: 40px; width: auto;"></a> -->
-    </div>
-    <!--<script>
-$(document).ready(function(){
-if ($('#cookie-notice').is(':visible')){
-$('.footer-fix-box').css("bottom",$('#cookie-notice').innerHeight());
-$('#chat-widget-container').css("bottom","190px !important");
-$('.polat').css("bottom","12rem");
-}
-else{
-$('.footer-fix-box').css("bottom","0");
-$('#chat-widget-container').css("bottom","140px !important");
-$('.polat').css("bottom","9rem");
-}
-$('#cookie-notice-close').click(function(){
-$('.footer-fix-box').css("bottom","0");
-$('#chat-widget-container').css("bottom","140px !important");
-$('.polat').css("bottom","9rem");
-});
-});
-</script>-->
+        </div>
+
     <div class="footerphones">
         <a href="tel:+902122120404">0212 212 04 04</a>
     </div>
     <div class="copyright-bar">
-        <div class="ppasa-logo"><a href="./" title="piyalepasa"><img
+        <div class="ppasa-logo"><a href="/" title="piyalepasa"><img
                     src="{{asset('front/premium-theme/images/logoDark.svg')}}" alt="Piyalepaşa"></a></div>
         <div class="copy">2023 PİYALEPAŞA. T&Uuml;M HAKLARI SAKLIDIR.</div>
         <div class="social-bar">
             bizi takip edin
-            <a href="https://www.facebook.com/piyalepasaistanbul" target="_blank" rel="noopener"
-               class="icon-facebook"></a>
-            <a href="https://twitter.com/semtpiyalepasa" target="_blank" rel="noopener" class="icon-twitter"></a>
-            <a href="https://www.instagram.com/piyalepasaistanbulpremium/" target="_blank" rel="noopener"
-               class="icon-instagram"></a>
-            <a href="https://www.youtube.com/channel/UCaPdavUkkjpp2VN6SYQJ-6w" target="_blank" rel="noopener"
-               class="icon-youtube"></a>
+            @foreach($settings->social_network as $platform => $url)
+                @if($url !== null)
+                    <a href="{{ $url }}" target="_blank" rel="noopener"
+                       class="icon-{{ $platform }}{{ $platform === 'youtube' ? '-play' : '-1' }}"></a>
+                @endif
+            @endforeach
         </div>
-        <div class="polat-logo"><a href="./hakkimizda.html" target="_blank"
+        <div class="polat-logo"><a href="/hakkimizda" target="_blank"
                                    rel="nofollow"><img src="{{asset('front/premium-theme/images/polat.svg')}}" alt="polat logo"/></a>
         </div>
     </div>
