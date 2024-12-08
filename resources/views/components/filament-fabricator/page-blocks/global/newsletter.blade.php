@@ -16,7 +16,7 @@
             }
         </style>
         <div class="news-list">
-            <ul id="document" data-type="document" class="boxArea">
+            <ul id="document-new" data-type="document" class="boxArea">
                 @foreach($newsletter as $item)
                 <li>
                     <a href="{{ \Illuminate\Support\Facades\Storage::url($item->file) }}" class="document" target="_blank">
@@ -27,7 +27,7 @@
                 </li>
                 @endforeach
             </ul>
-            <div>
+            <div class="paginate">
                 <ul class="pagination">
                     @php
                         $currentPage = $newsletter->currentPage();

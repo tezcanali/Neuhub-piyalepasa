@@ -18,7 +18,7 @@
             }
             </style>
             <div class="news-list news">
-                <ul id="news" data-type="news" class="boxArea">
+                <ul id="news-new" data-type="news" class="boxArea">
                     @foreach($news as $item)
                         <li>
                             <a href="{{ Storage::url($item->getTranslation('image', $language)) }}"
@@ -36,7 +36,7 @@
                     @endforeach
                 </ul>
 
-                <div>
+                <div id="paging">
                     @php
                         $currentPage = $news->currentPage();
                         $lastPage = $news->lastPage();
