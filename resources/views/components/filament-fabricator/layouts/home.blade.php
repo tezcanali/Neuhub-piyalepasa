@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="{{asset('front/premium-theme/css/icofont.min.css')}}" type="text/css" media="screen"
           charset="utf-8"/>
     <link rel="stylesheet" href="{{asset('front/premium-theme/js/owlcarousel/assets/owl.carousel.css')}}">
+    <script src="{{asset('front/js/lib/jquery-2.2.4.min.js')}}"></script>
 
     @foreach (\Z3d0X\FilamentFabricator\Facades\FilamentFabricator::getMeta() as $tag)
         {{ $tag }}
@@ -112,7 +113,6 @@
 
 @include('front.layout.footer')
 
-<script src="{{asset('front/js/lib/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('front/intl-tel-input/js/intlTelInput.min.js')}}"></script>
 <script src="{{asset('front/js/plugins/jquery.validate.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"
@@ -146,6 +146,7 @@
 <script src="{{asset('front/premium-theme/js/form/jquery.maskedinput-1.3.1.min.js')}}"></script>
 <script src="{{asset('front/premium-theme/js/form/intl-tel-input/js/intlTelInput.min.js')}}"></script>
 <script src="{{asset('front/premium-theme/js/form/jquery.validate.min.js')}}"></script>
+<script src="{{asset('front/premium-theme/js/paging.js')}}"></script>
 <script src='{{asset('front/premium-theme/js/functions.js')}}'></script>
 
 <script>

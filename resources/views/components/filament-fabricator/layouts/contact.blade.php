@@ -147,6 +147,7 @@
 <script src="{{asset('front/premium-theme/js/form/jquery.maskedinput-1.3.1.min.js')}}"></script>
 <script src="{{asset('front/premium-theme/js/form/intl-tel-input/js/intlTelInput.min.js')}}"></script>
 <script src="{{asset('front/premium-theme/js/form/jquery.validate.min.js')}}"></script>
+<script src="{{asset('front/premium-theme/js/paging.js')}}"></script>
 <script src='{{asset('front/premium-theme/js/functions.js')}}'></script>
 
 <script>
