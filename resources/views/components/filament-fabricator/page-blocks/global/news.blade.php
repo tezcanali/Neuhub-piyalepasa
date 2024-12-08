@@ -36,7 +36,7 @@
                     @endforeach
                 </ul>
 
-                <div id="paging">
+                <div>
                     @php
                         $currentPage = $news->currentPage();
                         $lastPage = $news->lastPage();

@@ -27,7 +27,7 @@
                 </li>
                 @endforeach
             </ul>
-            <div class="paginate">
+            <div>
                 <ul class="pagination">
                     @php
                         $currentPage = $newsletter->currentPage();
