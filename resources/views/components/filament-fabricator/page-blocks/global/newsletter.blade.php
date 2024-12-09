@@ -5,7 +5,7 @@
             @if($title)
                 <{{ $headingType ?? 'h1' }}
                     style
-                ="color: #BFA474;font-size:45px;font-weight: bold;">
+                ="position:relative;font-size:45px;font-weight:bold;color: #220728;line-height: 1.2;letter-spacing: -0.05em;margin-bottom:20px; margin-top:20px;">
                 {!! $title !!}
                 </{{ $headingType ?? 'h1' }}>
             @endif

@@ -49,7 +49,7 @@ class NewsResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
-            ])
+            ])->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
