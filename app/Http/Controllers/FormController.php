@@ -111,7 +111,7 @@ class FormController extends Controller
 
             if ($responseCrm->successful()) {
                 return view('front.layout.tesekkurler', [
-                    'name' => $request->firstName,
+                    'name' => $request->firstName . " " . $request->lastName,
                     'email' => $request->email,
                     'phone' => $request->phone
                 ]);
@@ -136,7 +136,7 @@ class FormController extends Controller
         if (!session()->has('formData')) {
             return redirect('/');
         }
-        
+
         return view('front.layout.tesekkurler', [
             'formData' => session('formData')
         ]);

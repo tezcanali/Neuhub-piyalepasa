@@ -420,13 +420,18 @@ $(function(){
             blockMultiClick = false;
             $('#send_button').css('opacity', 0.2).attr('disabled', true).text('Lütfen Bekleyiniz.');
 
+            // Ülke kodunu ve telefon numarasını birleştir
+            const dialCode = $('.selected-dial-code').text(); // Örn: +90
+            const phoneInput = $('.intltelinput').val(); // Örn: 5348970934
+            const fullPhoneNumber = dialCode + phoneInput; // Örn: +905348970934
+
             const formData = {
                 firstName: $('input[name="name"]').val(),
-                lastName: '',
-                phone: $('.phoneInput').val(),
+                lastName: $('input[name="lastname"]').val(),
+                phone: fullPhoneNumber,
                 email: $('input[name="email"]').val(),
                 message: $('textarea[name="message"]').val(),
-                konu: 'Piyalepasa Form',
+                konu: 'PİYALEPAŞA İSTANBUL PREMIUM',
                 _token: $('meta[name="csrf-token"]').attr('content')
             };
 
@@ -454,20 +459,20 @@ $(function(){
 
     $('.phoneValidate').submit(function(e) {
         e.preventDefault();
-        
-        // Telefon numarasını intl-tel-input'tan doğru formatta al
-        const phoneInput = $('.intltelinput');
-        const iti = window.intlTelInputGlobals.getInstance(phoneInput[0]);
-        const fullNumber = iti.getNumber(); // E.164 formatında tam numara alır (örn: +905348970934)
-        
+
+        // Ülke kodunu ve telefon numarasını birleştir
+        const dialCode = $('.selected-dial-code').text(); // Örn: +90
+        const phoneInput = $('.intltelinput').val(); // Örn: 5348970934
+        const fullPhoneNumber = dialCode + phoneInput; // Örn: +905348970934
+
         const verifyData = {
             dataId: $('.phoneValidate input[name="dataId"]').val(),
-            phone: fullNumber, // Düzgün formatlanmış telefon numarası
+            phone: fullPhoneNumber, // Birleştirilmiş tam telefon numarası
             code: $('.phoneValidate input[name="code"]').val(),
             firstName: $('input[name="name"]').val(),
-            lastName: '',
+            lastName: $('input[name="lastname"]').val(),
             email: $('input[name="email"]').val(),
-            konu: 'Piyalepasa Form',
+            konu: 'PİYALEPAŞA İSTANBUL PREMIUM',
             _token: $('meta[name="csrf-token"]').attr('content')
         };
 

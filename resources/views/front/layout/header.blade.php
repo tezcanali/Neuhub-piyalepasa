@@ -152,7 +152,13 @@
                     <div class="fRow">
                         <div class="fCol input">
                             <div class="element"><input type="text" name="name" id="dummyName01"
-                                                        placeholder="Adınız Soyadınız"/></div>
+                                                        placeholder="Adınız"/></div>
+                        </div>
+                    </div>
+                    <div class="fRow">
+                        <div class="fCol input">
+                            <div class="element"><input type="text" name="lastname" id="dummyName07"
+                                                        placeholder="Soyadınız"/></div>
                         </div>
                     </div>
                     <div class="fRow">
