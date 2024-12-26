@@ -149,6 +149,8 @@
 <script src="{{asset('front/premium-theme/js/form/jquery.validate.min.js')}}"></script>
 <script src="{{asset('front/premium-theme/js/paging.js')}}"></script>
 <script src='{{asset('front/premium-theme/js/functions.js')}}'></script>
+<link rel="stylesheet" type="text/css" href="{{asset('front/premium-theme/js/form/intl-tel-input/css/intlTelInput.min.css')}}"/>
+<script src="{{asset('front/premium-theme/js/form/intl-tel-input/js/intlTelInput.min.js')}}"></script>
 
 <script>
     window.addEventListener('load', function () {
