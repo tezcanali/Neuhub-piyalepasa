@@ -455,9 +455,14 @@ $(function(){
     $('.phoneValidate').submit(function(e) {
         e.preventDefault();
         
+        // Telefon numarasını intl-tel-input'tan doğru formatta al
+        const phoneInput = $('.intltelinput');
+        const iti = window.intlTelInputGlobals.getInstance(phoneInput[0]);
+        const fullNumber = iti.getNumber(); // E.164 formatında tam numara alır (örn: +905348970934)
+        
         const verifyData = {
             dataId: $('.phoneValidate input[name="dataId"]').val(),
-            phone: $('.phoneValidate input[name="phone"]').val(),
+            phone: fullNumber, // Düzgün formatlanmış telefon numarası
             code: $('.phoneValidate input[name="code"]').val(),
             firstName: $('input[name="name"]').val(),
             lastName: '',
@@ -471,7 +476,6 @@ $(function(){
             url: '/sms-submit',
             data: verifyData,
             success: function(html) {
-                // Başarılı yanıtı direkt sayfaya yaz
                 document.open();
                 document.write(html);
                 document.close();
