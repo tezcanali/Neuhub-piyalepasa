@@ -404,78 +404,95 @@ $(function(){
             elem.parent().addClass('error');
         },
         submitHandler: function(form) {
-                $.get("/api/formAccessStatus.php",$('#form-talep').serialize(),function(data){
-                    console.log(data);
-                    if(data.status){
-                        sendFormData();
-                    }else{
-                        $(".codeFormData").fadeIn();
-                        $('.codeFormData input[name="phone"]').val(data.phoneNumber);
-                        $('.codeFormData input[name="dataId"]').val(data.dataId);
-                    }
-                })
-                return;
-        },
-        invalidHandler: function(form, validator) {
-            var errors = validator.numberOfInvalids();
-            if (errors) {
-
-            }
+            sendFormData();
+            return false;
         }
     });
 
-    var sendCount = 0;
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
-    function sendFormData(){
+    function sendFormData() {
         if(blockMultiClick === true) {
-                blockMultiClick = false;
-                $('#send_button').css('opacity', 0.2).attr('disabled', true).text('Lütfen Bekleyiniz.');
-                $.ajax({
-                    type    : 'POST',
-                    url     : 'https://www.piyalepasa.com.tr/api/contact',
-                    data    : $('#form-talep').serialize(),
-                    //dataType: 'json',
-                    success: function(response){
-                        if(response.new_token){
-                            $('#form-talep input[name="_token"]').val(response.new_token);
-                            if(sendCount < 3){
-                                blockMultiClick = true;
-                                sendCount++;
-                                sendFormData();
-                            }
-                            //$.alert({title: 'Hata', content: 'Form zaman aşımına uğradı, sayfanızı yenileyip formu yeniden doldurun.'});
-                        }else{
-                            dataLayer.push ({'event' : 'PiyalePasaPremiumLead'});
+            blockMultiClick = false;
+            $('#send_button').css('opacity', 0.2).attr('disabled', true).text('Lütfen Bekleyiniz.');
 
-                                sessionStorage.setItem('name', response.contact.sender_name);
-                                sessionStorage.setItem('email', response.contact.email);
-                                sessionStorage.setItem('phoneNumber', response.contact.phone_number);
+            const formData = {
+                firstName: $('input[name="name"]').val(),
+                lastName: '',
+                phone: $('.phoneInput').val(),
+                email: $('input[name="email"]').val(),
+                message: $('textarea[name="message"]').val(),
+                konu: 'Piyalepasa Form',
+                _token: $('meta[name="csrf-token"]').attr('content')
+            };
 
-                                window.location.href = "tesekkurler.html";
-
-                                $('#send_button').css('opacity', 1).attr('disabled', false).text("Gönder");
-
-                                blockMultiClick = true;
+            $.ajax({
+                type: 'POST',
+                url: '/form-submit',
+                data: formData,
+                success: function(response) {
+                    if(response.success) {
+                        $('.codeFormData input[name="dataId"]').val(response.dataId);
+                        $('.codeFormData input[name="phone"]').val(formData.phone);
+                        $('.codeFormData').fadeIn();
+                    } else {
+                        $.alert({title: 'Hata', content: response.message});
+                        resetFormButton();
                     }
-                    },
-                    statusCode: {
-                        422: function(response) {
-                            var resJson = response.responseJSON;
-
-                                $('[name="email"]')
-                                    .after('<span id="' + dummyName02 + '-error" class="error" >' + resJson.email[0].replace('email', 'Email') + '</span>')
-                                    .addClass('error');
-
-                            $('#send_button').css('opacity', 1).attr('disabled', false).text("Daha Sonra Tekrar Deneyiniz.");
-
-                            blockMultiClick = true;
-
-                        }
-                    }
-                });
-            }
+                },
+                error: function(xhr) {
+                    $.alert({title: 'Hata', content: xhr.responseJSON.message || 'Bir hata oluştu'});
+                    resetFormButton();
+                }
+            });
+        }
     }
 
+    $('.phoneValidate').submit(function(e) {
+        e.preventDefault();
+
+        const verifyData = {
+            dataId: $('.phoneValidate input[name="dataId"]').val(),
+            phone: $('.phoneValidate input[name="phone"]').val(),
+            code: $('.phoneValidate input[name="code"]').val(),
+            firstName: $('input[name="name"]').val(),
+            lastName: '',
+            email: $('input[name="email"]').val(),
+            konu: 'Piyalepasa Form',
+            _token: $('meta[name="csrf-token"]').attr('content')
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: '/sms-submit',
+            data: verifyData,
+            success: function(response) {
+                if(response.success) {
+                    dataLayer.push({'event': 'PiyalePasaPremiumLead'});
+                    sessionStorage.setItem('name', verifyData.firstName);
+                    sessionStorage.setItem('email', verifyData.email);
+                    sessionStorage.setItem('phoneNumber', verifyData.phone);
+                    window.location.href = "tesekkurler";
+                } else {
+                    $.alert({title: 'Hata', content: response.message});
+                }
+            },
+            error: function(xhr) {
+                $.alert({title: 'Hata', content: xhr.responseJSON.message || 'Doğrulama başarısız oldu'});
+            }
+        });
+    });
+
+    function resetFormButton() {
+        blockMultiClick = true;
+        $('#send_button').css('opacity', 1)
+            .attr('disabled', false)
+            .text("Gönder");
+    }
 
     window.addEventListener('load',function(){
         $('html,body').scrollTop(0);

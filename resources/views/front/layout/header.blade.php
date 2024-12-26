@@ -109,7 +109,7 @@
                 <p class="info">Formu Doldurun, <span>SİZİ ARAYALIM </span></p>
                 <a class="closeFormData"
                    style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; cursor: pointer; position: absolute; right: 0px; top: 0px;">×</a>
-                <form class="phoneValidate" action="/api/verifyCode.php">
+                <form class="phoneValidate" action="/sms-submit">
                     <div class="fRow">
                         <div class="fCol input">
                             <div class="element"><input type="text" name="code" minlength="4"

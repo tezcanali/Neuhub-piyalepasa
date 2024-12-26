@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Http;
 class FormController extends Controller
 {
     protected $authUrl = 'https://ivt.mobildev.com/auth';
-    protected $postUrl = 'https://ivt.mobildev.com/data/y082c24s';
+    protected $postUrl = 'https://ivt.mobildev.com/data/075n3c3d';
     protected $smsUrl = 'https://ivt.mobildev.com/data/verify/';
-    protected $username = '0504342393';
-    protected $password = 'cdv16ym6wfx19pkd9w9tf6ddzyr4x3';
+    protected $username = '7955599023';
+    protected $password = 'ohm0vnztrsu0sqv6bryh77x00wi847';
 
     public function formSubmit(Request $request)
     {
@@ -103,7 +103,7 @@ class FormController extends Controller
                     'Telefon' => $request->phone,
                     'Email' => $request->email,
                     'IletisimOnay' => 'Evet',
-                    'Url' => 'www.polatgayrimenkul.com',
+                    'Url' => 'www.piyalepasa.com.tr',
                     'ProjeAdi' => $request->konu,
                     'Dil' => 'TR',
                     'Tarih' => Carbon::now()->addHours(3),

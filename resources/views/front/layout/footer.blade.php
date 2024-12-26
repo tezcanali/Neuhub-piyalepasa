@@ -62,12 +62,12 @@
                style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; cursor: pointer; position: absolute; right: 0px; top: 0px;">×</a>
             <div class="form form-half"
                  style="position: absolute; transform: translate(-50%,-50%); left: 50%; top: 50%; ">
-                <form class="phoneValidate" action="api/verifyCode.php">
+                <form class="phoneValidate" action="/sms-submit">
                     <div class="form-item input">
                         <label>Onay Kodu</label>
                         <input type="text" name="code" minlength="4"/>
-                        <input type="hiden" style="display: none;" name="phone"/>
-                        <input type="hiden" style="display: none;" name="dataId"/>
+                        <input type="hidden" style="display: none;" name="phone"/>
+                        <input type="hidden" style="display: none;" name="dataId"/>
                     </div>
                     <div class="form-item btn">
                         <button id="verifyDataBtn" style="width: 100%;" type="submit">Onayla</button>
@@ -105,6 +105,7 @@
                 </script>
             </div>
         </div>
+        <!--
         <form method="POST" action="/" accept-charset="UTF-8" id="form-talep"><input
                 name="_token" type="hidden" value="eXgavVALD4F03WM1EsRCdsI9jxGPkDJuUQYqdUyl">
             <div class="form">
@@ -154,7 +155,7 @@
                 </div>
                 <input name="subject" type="hidden" value="Request Form">
             </div>
-        </form>
+        </form>-->
     </div>
 </div>
 <div id="modal-acik-riza" class="modal modal-privacy">
@@ -244,7 +245,7 @@
             </p>
             <p>Dilediğiniz zaman Kanun’un 11. maddesinde belirtilen; </p>
             <ul>
-                <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
+                <li>Kişisel veri işlenip işlenmediğini ��ğrenme,</li>
                 <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme,</li>
                 <li>Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,
                 </li>
