@@ -472,7 +472,7 @@ $(function(){
             data: verifyData,
             success: function(response) {
                 if(response.success) {
-                    dataLayer.push({'event': 'PiyalePasaPremiumLead'});
+                    // dataLayer.push({'event': 'PiyalePasaPremiumLead'});
                     sessionStorage.setItem('name', verifyData.firstName);
                     sessionStorage.setItem('email', verifyData.email);
                     sessionStorage.setItem('phoneNumber', verifyData.phone);
