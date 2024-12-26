@@ -480,7 +480,7 @@ $(function(){
             type: 'POST',
             url: '/sms-submit',
             data: verifyData,
-            success: function(html) {
+            success: function(response) {
                 if(response.success && response.redirect) {
                     window.location.href = response.redirect;
                 } else {
