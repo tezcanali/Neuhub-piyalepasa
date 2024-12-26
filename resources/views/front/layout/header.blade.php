@@ -9,8 +9,8 @@
         <div class="navTools">
             <a class="headertel" href="tel:+902122120404">0 212 212 04 04 </a>
 
-            <a href="https://polatpiyalepasacarsi.com/"><span><img style="margin:0;"
-                                                                   src="{{asset('front/premium-theme/images/polat2.png')}}"></span></a>
+            <a href="https://polatpiyalepasacarsi.com/"><span>
+                    <img style="margin:0;" src="{{asset('front/images/yeni-image.webp')}}"></span></a>
 
             <a href="{{asset('front/premium-theme/media/timelapse.mp4')}}" data-fancybox><span><img
                         src="{{asset('front/premium-theme/images/icons/timelapse.svg')}}"><small>TIME LAPSE</small></span></a>
