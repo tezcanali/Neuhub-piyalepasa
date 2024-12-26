@@ -381,12 +381,10 @@ $(function(){
                 required: true,
             },
             phoneNumber: 'required',
-            //subject: 'required',
             email: {
                 required: true,
                 email: true,
             },
-            //message: 'required'
         },
         messages: {
             name: {
@@ -399,8 +397,6 @@ $(function(){
                 email: emailCheck
             },
             agreed: agreedRequired,
-            //subject: selectReqiured,
-            //message: messageRequired,
             captcha: captchaRequired,
         },
         errorPlacement: function(label, elem){
@@ -451,40 +447,15 @@ $(function(){
                         }else{
                             dataLayer.push ({'event' : 'PiyalePasaPremiumLead'});
 
-
-                            /*var id =response.contact.id;
-                            ga('send', { 'hitType': 'pageview', 'page': '/talep-ok?place={{ is_null(Request::segment(1)) ? "anasayfa" : Request::segment(1)}}', 'title': '/talep-ok?place={{ is_null(Request::segment(1)) ? "anasayfa" : Request::segment(1)}}' });
-
-                            //Conversion Page Kod
-                            window.google_trackConversion({
-                                google_conversion_id: 944312178,
-                                google_remarketing_only: false,
-                                google_conversion_language: "en",
-                                google_conversion_format: "3",
-                                google_conversion_color: "ffffff",
-                                google_conversion_label: "0JyWCLWd_lwQ8p6kwgM",
-                            });
-
-                                var conversion = '<iframe src="https://tr.rdrtr.com/SLB64?adv_sub='+id+'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-                                $("body").append(conversion);*/
                                 sessionStorage.setItem('name', response.contact.sender_name);
                                 sessionStorage.setItem('email', response.contact.email);
                                 sessionStorage.setItem('phoneNumber', response.contact.phone_number);
 
-                                // Teşekkürler sayfasına yönlendirme
                                 window.location.href = "tesekkurler.html";
 
                                 $('#send_button').css('opacity', 1).attr('disabled', false).text("Gönder");
 
                                 blockMultiClick = true;
-                            /*$.alert({
-                                title: 'Formunuz Başarıyla İletildi',
-                                content: 'Form doldurduğunuz için teşekkür ederiz. Müşteri temsilcilerimiz en kısa sürede sizinle irtibata geçecektir.',
-                                confirm: function () {
-                                    $.magnificPopup.close();
-                                    window.location.reload();
-                                },
-                            });*/
                     }
                     },
                     statusCode: {
