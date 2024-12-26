@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Piyalepaşa İstanbul Premium Projesi | Piyalepaşa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="piyalepasa-istanbul-premium/assets/css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="piyalepasa-istanbul-premium/assets/css/icofont.min.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="{{ asset('front/assets/css/style.css')}}" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="{{ asset('front/assets/css/icofont.min.css')}}" type="text/css" media="screen" charset="utf-8" />
     <link rel="canonical" href="https://www.piyalepasa.com.tr/tesekkurler.html" />
 
     <meta name="description" content="Piyalepaşa İstanbul Premium'un konforlu rezidans daireleri, geniş balkonları, terasları ve yanıbaşındaki Polat Piyalepaşa Çarşı ile ayrıcalıklı bir yaşam sizi bekliyor !">
@@ -30,7 +30,7 @@
 
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
-<script src="piyalepasa-istanbul-premium/assets/js/messagebox.js"></script>
+<script src="{{ asset('front/assets/js/messagebox.js')}}"></script>
 
 <!-- Offer Conversion: Piyalepasa [CPL] -->
 <iframe src="https://ad.adrttt.com/SLBjU" scrolling="no" frameborder="0" width="1" height="1"></iframe>
@@ -49,7 +49,6 @@
         </div>
     `;
 
-    // MessageBox'u göster ve ardından yönlendirme yap
     $.MessageBox(messageContent).done(function () {
         location.href = '/';
     });
