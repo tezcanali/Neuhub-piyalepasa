@@ -10,6 +10,4 @@ Route::get('/sitemap', [\App\Http\Controllers\SitemapController::class, 'index']
 
 Route::post('/form-submit', [FormController::class, 'formSubmit'])->name('form-submit');
 Route::post('/sms-submit', [FormController::class, 'sendSms'])->name('sms-submit');
-Route::get('/tesekkurler', function () {
-    return view('front.layout.tesekkurler');
-});
+Route::get('/tesekkurler', [FormController::class, 'showTesekkurler'])->name('tesekkurler');

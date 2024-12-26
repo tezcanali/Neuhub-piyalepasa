@@ -454,7 +454,7 @@ $(function(){
 
     $('.phoneValidate').submit(function(e) {
         e.preventDefault();
-
+        
         const verifyData = {
             dataId: $('.phoneValidate input[name="dataId"]').val(),
             phone: $('.phoneValidate input[name="phone"]').val(),
@@ -473,10 +473,13 @@ $(function(){
             success: function(response) {
                 if(response.success) {
                     // dataLayer.push({'event': 'PiyalePasaPremiumLead'});
+                    // Verileri sessionStorage'a kaydet
                     sessionStorage.setItem('name', verifyData.firstName);
                     sessionStorage.setItem('email', verifyData.email);
                     sessionStorage.setItem('phoneNumber', verifyData.phone);
-                    window.location.href = "tesekkurler";
+                    
+                    // Doğru URL'e yönlendir
+                    window.location.href = "/tesekkurler";
                 } else {
                     $.alert({title: 'Hata', content: response.message});
                 }

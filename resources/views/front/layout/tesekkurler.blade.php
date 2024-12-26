@@ -39,19 +39,13 @@
 
 
 <script>
-    // SessionStorage'dan verileri al
-    const name = sessionStorage.getItem('name');
-    const email = sessionStorage.getItem('email');
-    const phoneNumber = sessionStorage.getItem('phoneNumber');
-
-    // MessageBox içeriği oluştur
     const messageContent = `
         <div>
             <p>Formunuz Başarıyla İletildi. Form doldurduğunuz için teşekkür ederiz. Müşteri temsilcilerimiz en kısa sürede sizinle irtibata geçecektir.</p>
             <br/>
-            <div id="name"><strong>İsim: </strong>${name}</div>
-            <div id="email"><strong>Email: </strong>${email}</div>
-            <div id="phone"><strong>Telefon: </strong>${phoneNumber}</div>
+            <div id="name"><strong>İsim: </strong>{{ $formData['name'] ?? '' }}</div>
+            <div id="email"><strong>Email: </strong>{{ $formData['email'] ?? '' }}</div>
+            <div id="phone"><strong>Telefon: </strong>{{ $formData['phone'] ?? '' }}</div>
         </div>
     `;
 
@@ -59,7 +53,6 @@
     $.MessageBox(messageContent).done(function () {
         location.href = '/';
     });
-
 </script>
 
 

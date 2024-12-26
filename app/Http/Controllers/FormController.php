@@ -110,12 +110,13 @@ class FormController extends Controller
                 ]);
 
             if ($responseCrm->successful()) {
-                return response()->json([
-                    'success' => true,
-                    'message' => "Doğrulama başarıyla gerçekleşti yönlendiriliyorsunuz.",
-                    'data' => $request->all(),
-                    'date' => Carbon::now()->addHours(3),
-                ], 200);
+                return redirect()->route('tesekkurler')->with([
+                    'formData' => [
+                        'name' => $request->firstName,
+                        'email' => $request->email,
+                        'phone' => $request->phone
+                    ]
+                ]);
             }
 
             return response()->json([
@@ -130,5 +131,16 @@ class FormController extends Controller
             'message' => "Doğrulama kodunuz hatalı, lütfen tekrar deneyiniz.",
             'errors' => $response->json()
         ], 422);
+    }
+
+    public function showTesekkurler()
+    {
+        if (!session()->has('formData')) {
+            return redirect('/');
+        }
+        
+        return view('front.layout.tesekkurler', [
+            'formData' => session('formData')
+        ]);
     }
 }
