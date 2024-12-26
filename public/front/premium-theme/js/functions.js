@@ -481,9 +481,11 @@ $(function(){
             url: '/sms-submit',
             data: verifyData,
             success: function(html) {
-                document.open();
-                document.write(html);
-                document.close();
+                if(response.success && response.redirect) {
+                    window.location.href = response.redirect;
+                } else {
+                    $.alert({title: 'Hata', content: response.message || 'Bir hata oluştu'});
+                }
             },
             error: function(xhr) {
                 $.alert({title: 'Hata', content: xhr.responseJSON.message || 'Doğrulama başarısız oldu'});
