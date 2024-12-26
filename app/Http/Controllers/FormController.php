@@ -110,12 +110,10 @@ class FormController extends Controller
                 ]);
 
             if ($responseCrm->successful()) {
-                return redirect()->route('tesekkurler')->with([
-                    'formData' => [
-                        'name' => $request->firstName,
-                        'email' => $request->email,
-                        'phone' => $request->phone
-                    ]
+                return view('front.layout.tesekkurler', [
+                    'name' => $request->firstName,
+                    'email' => $request->email,
+                    'phone' => $request->phone
                 ]);
             }
 

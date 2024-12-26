@@ -470,19 +470,11 @@ $(function(){
             type: 'POST',
             url: '/sms-submit',
             data: verifyData,
-            success: function(response) {
-                if(response.success) {
-                    // dataLayer.push({'event': 'PiyalePasaPremiumLead'});
-                    // Verileri sessionStorage'a kaydet
-                    sessionStorage.setItem('name', verifyData.firstName);
-                    sessionStorage.setItem('email', verifyData.email);
-                    sessionStorage.setItem('phoneNumber', verifyData.phone);
-                    
-                    // Doğru URL'e yönlendir
-                    window.location.href = "/tesekkurler";
-                } else {
-                    $.alert({title: 'Hata', content: response.message});
-                }
+            success: function(html) {
+                // Başarılı yanıtı direkt sayfaya yaz
+                document.open();
+                document.write(html);
+                document.close();
             },
             error: function(xhr) {
                 $.alert({title: 'Hata', content: xhr.responseJSON.message || 'Doğrulama başarısız oldu'});
