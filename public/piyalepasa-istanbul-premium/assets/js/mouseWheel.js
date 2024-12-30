@@ -1,5 +1,5 @@
 ! function(a) {
-    "function" == typeof define && define.amd ? define(["jquery"], a) : "object" == typeof exports ? module.exports = a : a(jQuery)
+    "function" == typeof define && define.amd ? define(["public/piyalepasa-istanbul-premium/assets/js/jquery.js"], a) : "object" == typeof exports ? module.exports = a : a(jQuery)
 }(function(a) {
     function i(b) {
         var c = b || window.event,
@@ -43,8 +43,8 @@
         setup: function() {
             if (this.addEventListener){
             	for (var b = c.length; b;){
-            		this.addEventListener(c[--b], i, {passive: false});             	
-            	} 
+            		this.addEventListener(c[--b], i, {passive: false});
+            	}
             }
             else {
             	this.onmousewheel = i;
