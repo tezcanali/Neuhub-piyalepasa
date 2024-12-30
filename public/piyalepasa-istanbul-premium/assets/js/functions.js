@@ -251,12 +251,10 @@ $("#form-talep").validate({
             required: true,
         },
         phoneNumber: 'required',
-        //subject: 'required',
         email: {
             required: true,
             email: true,
         },
-        //message: 'required'
     },
     messages: {
         name: {
@@ -269,8 +267,6 @@ $("#form-talep").validate({
             email: emailCheck
         },
         agreed: agreedRequired,
-        //subject: selectReqiured,
-        //message: messageRequired,
         captcha: captchaRequired,
     },
     errorPlacement: function(label, elem){
@@ -278,94 +274,65 @@ $("#form-talep").validate({
         elem.parent().addClass('error');
     },
     submitHandler: function(form) {
-        $.get("/api/formAccessStatus.php",$('#form-talep').serialize(),function(data){
-            if(data.status){
-                sendFormData();
-            }else{
-                $(".codeFormData").fadeIn();
-                $('.codeFormData input[name="phone"]').val(data.phoneNumber);
-                $('.codeFormData input[name="dataId"]').val(data.dataId);
-            }
-        })
-        return;
-    },
-    invalidHandler: function(form, validator) {
-        var errors = validator.numberOfInvalids();
-        if (errors) {
+        sendFormData();
+        return false;
+    }
+});
 
-        }
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
 
 var sendCount = 0;
 
-function sendFormData(){
+function sendFormData() {
     if(blockMultiClick === true) {
         blockMultiClick = false;
         $('#send_button').css('opacity', 0.2).attr('disabled', true).text('Lütfen Bekleyiniz.');
+
+        const dialCode = $('.selected-dial-code').text();
+        const phoneInput = $('.intltelinput').val();
+        const fullPhoneNumber = dialCode + phoneInput;
+
+        const formData = {
+            firstName: $('input[name="name"]').val(),
+            lastName: $('input[name="lastname"]').val(),
+            phone: fullPhoneNumber,
+            email: $('input[name="email"]').val(),
+            message: $('textarea[name="message"]').val(),
+            konu: 'PİYALEPAŞA İSTANBUL PREMIUM',
+            _token: $('meta[name="csrf-token"]').attr('content')
+        };
+
         $.ajax({
-            type    : 'POST',
-            url     : 'https://www.piyalepasa.com.tr/api/contact',
-            data    : $('#form-talep').serialize(),
-            //dataType: 'json',
-            success: function(response){
-                if(response.new_token){
-                    $('#form-talep input[name="_token"]').val(response.new_token);
-                    if(sendCount < 3){
-                        blockMultiClick = true;
-                        sendCount++;
-                        sendFormData();
-                    }
-                    //$.alert({title: 'Hata', content: 'Form zaman aşımına uğradı, sayfanızı yenileyip formu yeniden doldurun.'});
-                }else{
-                    dataLayer.push ({'event' : 'PiyalePasaPremiumLead'});
-
-                    /*var id =response.contact.id;
-                    ga('send', { 'hitType': 'pageview', 'page': '/talep-ok?place={{ is_null(Request::segment(1)) ? "anasayfa" : Request::segment(1)}}', 'title': '/talep-ok?place={{ is_null(Request::segment(1)) ? "anasayfa" : Request::segment(1)}}' });
-
-                    //Conversion Page Kod
-                    window.google_trackConversion({
-                        google_conversion_id: 944312178,
-                        google_remarketing_only: false,
-                        google_conversion_language: "en",
-                        google_conversion_format: "3",
-                        google_conversion_color: "ffffff",
-                        google_conversion_label: "0JyWCLWd_lwQ8p6kwgM",
-                    });
-
-                        var conversion = '<iframe src="https://tr.rdrtr.com/SLB64?adv_sub='+id+'" scrolling="no" frameborder="0" width="1" height="1"></iframe>';
-                        $("body").append(conversion);*/
-                    window.location.href="tesekkurler.html";
-
-                    $('#send_button').css('opacity', 1).attr('disabled', false).text("Gönder");
-                    /*$.alert({
-                        title: 'Formunuz Başarıyla İletildi',
-                        content: 'Form doldurduğunuz için teşekkür ederiz. Müşteri temsilcilerimiz en kısa sürede sizinle irtibata geçecektir.',
-                        confirm: function () {
-                            $.magnificPopup.close();
-                            window.location.reload();
-                        },
-                    });*/
-
-                    blockMultiClick = true;
+            type: 'POST',
+            url: '/form-submit',
+            data: formData,
+            success: function(response) {
+                if(response.success) {
+                    $('.codeFormData input[name="dataId"]').val(response.dataId);
+                    $('.codeFormData input[name="phone"]').val(formData.phone);
+                    $('.codeFormData').fadeIn();
+                } else {
+                    $.alert({title: 'Hata', content: response.message});
+                    resetFormButton();
                 }
             },
-            statusCode: {
-                422: function(response) {
-                    var resJson = response.responseJSON;
-
-                    $('[name="email"]')
-                        .after('<span id="' + dummyName02 + '-error" class="error" >' + resJson.email[0].replace('email', 'Email') + '</span>')
-                        .addClass('error');
-
-                    $('#send_button').css('opacity', 1).attr('disabled', false).text("Daha Sonra Tekrar Deneyiniz.");
-
-                    blockMultiClick = true;
-
-                }
+            error: function(xhr) {
+                $.alert({title: 'Hata', content: xhr.responseJSON.message || 'Bir hata oluştu'});
+                resetFormButton();
             }
         });
     }
+}
+
+function resetFormButton() {
+    blockMultiClick = true;
+    $('#send_button').css('opacity', 1)
+        .attr('disabled', false)
+        .text("Gönder");
 }
 
 $(window).scroll(function() {
