@@ -1,85 +1,73 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-MediumItalic.eot");
-  src: local("GothamSSm Medium Italic"), local("GothamSSm-MediumItalic"), url("fonts/GothamSSm-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-MediumItalic.woff2") format("woff2"), url("fonts/GothamSSm-MediumItalic.woff") format("woff"), url("fonts/GothamSSm-MediumItalic.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-MediumItalic.ttf");
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-Book.eot");
-  src: local("GothamSSm Book"), local("GothamSSm-Book"), url("fonts/GothamSSm-Book.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-Book.woff2") format("woff2"), url("fonts/GothamSSm-Book.woff") format("woff"), url("fonts/GothamSSm-Book.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Book.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-XLight.eot");
-  src: local("GothamSSm ExtraLight"), local("GothamSSm-XLight"), url("fonts/GothamSSm-XLight.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-XLight.woff2") format("woff2"), url("fonts/GothamSSm-XLight.woff") format("woff"), url("fonts/GothamSSm-XLight.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-XLight.ttf");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-LightItalic.eot");
-  src: local("GothamSSm Light Italic"), local("GothamSSm-LightItalic"), url("fonts/GothamSSm-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-LightItalic.woff2") format("woff2"), url("fonts/GothamSSm-LightItalic.woff") format("woff"), url("fonts/GothamSSm-LightItalic.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-LightItalic.ttf");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-Medium.eot");
-  src: local("GothamSSm Medium"), local("GothamSSm-Medium"), url("fonts/GothamSSm-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-Medium.woff2") format("woff2"), url("fonts/GothamSSm-Medium.woff") format("woff"), url("fonts/GothamSSm-Medium.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Medium.ttf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-BookItalic.eot");
-  src: local("GothamSSm Book Italic"), local("GothamSSm-BookItalic"), url("fonts/GothamSSm-BookItalic.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-BookItalic.woff2") format("woff2"), url("fonts/GothamSSm-BookItalic.woff") format("woff"), url("fonts/GothamSSm-BookItalic.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-BookItalic.ttf");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-Black.eot");
-  src: local("GothamSSm Black"), local("GothamSSm-Black"), url("fonts/GothamSSm-Black.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-Black.woff2") format("woff2"), url("fonts/GothamSSm-Black.woff") format("woff"), url("fonts/GothamSSm-Black.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Black.ttf");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-BlackItalic.eot");
-  src: local("GothamSSm Black Italic"), local("GothamSSm-BlackItalic"), url("fonts/GothamSSm-BlackItalic.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-BlackItalic.woff2") format("woff2"), url("fonts/GothamSSm-BlackItalic.woff") format("woff"), url("fonts/GothamSSm-BlackItalic.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-BlackItalic.ttf");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-XLightItalic.eot");
-  src: local("GothamSSm ExtraLight Italic"), local("GothamSSm-XLightItalic"), url("fonts/GothamSSm-XLightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-XLightItalic.woff2") format("woff2"), url("fonts/GothamSSm-XLightItalic.woff") format("woff"), url("fonts/GothamSSm-XLightItalic.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-XLightItalic.ttf");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-Light.eot");
-  src: local("GothamSSm Light"), local("GothamSSm-Light"), url("fonts/GothamSSm-Light.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-Light.woff2") format("woff2"), url("fonts/GothamSSm-Light.woff") format("woff"), url("fonts/GothamSSm-Light.ttf") format("truetype");
-  font-weight: 300;
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Light.ttf");
+    font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-Bold.eot");
-  src: local("GothamSSm Bold"), local("GothamSSm-Bold"), url("fonts/GothamSSm-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-Bold.woff2") format("woff2"), url("fonts/GothamSSm-Bold.woff") format("woff"), url("fonts/GothamSSm-Bold.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "GothamSSm";
-  src: url("fonts/GothamSSm-BoldItalic.eot");
-  src: local("GothamSSm Bold Italic"), local("GothamSSm-BoldItalic"), url("fonts/GothamSSm-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/GothamSSm-BoldItalic.woff2") format("woff2"), url("fonts/GothamSSm-BoldItalic.woff") format("woff"), url("fonts/GothamSSm-BoldItalic.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("fonts/Roboto-BoldItalic.ttf");
   font-weight: bold;
   font-style: italic;
 }
@@ -151,7 +139,7 @@ a, a img {
 
 /*General Elements */
 body, input, textarea, select, option {
-  font-family: "GothamSSm";
+  font-family: "Roboto";
 }
 
 *, *:after, *::before {
@@ -2221,7 +2209,7 @@ MessageBox - A jQuery Plugin to replace Javascript's window.alert(), window.conf
     Documentation   : http://gasparesganga.com/labs/jquery-message-box/
 ***********************************************************************************************************************/
 /*
-    You can customize your MessageBox style directly in this file 
+    You can customize your MessageBox style directly in this file
     or override some classes/styles using an external CSS file loaded after this.
 */
 /* Overlay */
@@ -2363,6 +2351,6 @@ MessageBox - A jQuery Plugin to replace Javascript's window.alert(), window.conf
     color: #220728;
     text-align: right;
     font-size: 15px;
-  
+
   }
 /*# sourceMappingURL=style.css.map */
