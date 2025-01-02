@@ -13,20 +13,20 @@ overflow: hidden !important;
   .fancybox-inner{
       width: 450px !important;
     margin: auto !important;
-    height: 370px !important;	
+    height: 370px !important;
     /* max-width: 370px !important; */
-    transform: scale(1.2);  
+    transform: scale(1.2);
   }
 }
  @media screen and (max-width:568px){
 .fancybox-inner{
     width: 100% !important;
   margin: auto !important;
-  height: 310px !important;	
+  height: 310px !important;
   max-width: 370px !important;
-  transform: scale(1.2);  
+  transform: scale(1.2);
 }
-} 
+}
 @media screen and (max-width:380px){
 .fancybox-inner{
   transform: scale(1);
@@ -43,7 +43,7 @@ overflow: hidden !important;
 }
 .scale-fix1{
   transform: scale(0.7);
-} 
+}
 .arGallery section {
   display: none;
 }
@@ -2752,8 +2752,8 @@ img.rsImg {
 
 @font-face {
   font-family: "fontbase-bold";
-  src: url(../fonts/gotham-bold.eot);
-  src: url('../fonts/gotham-bold.eot?#iefix') format('embedded-opentype'), url(../fonts/gotham-bold.woff) format('woff'), url(../fonts/gotham-bold.ttf) format('truetype'), url('../fonts/gotham-bold.svg#gotham-bold') format('svg');
+  src: url(../fonts/Roboto-Bold.ttf);
+  src: url('../fonts/Roboto-Bold.ttf?#iefix') format('embedded-opentype'), url(../fonts/Roboto-Bold.ttf) format('woff'), url(../fonts/Roboto-Bold.ttf) format('truetype'), url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -2762,8 +2762,8 @@ img.rsImg {
 
 @font-face {
   font-family: "fontbase-medium";
-  src: url(../fonts/gotham-medium.eot);
-  src: url('../fonts/gotham-medium.eot?#iefix') format('embedded-opentype'), url(../fonts/gotham-medium.woff) format('woff'), url(../fonts/gotham-medium.ttf) format('truetype'), url('../fonts/gotham-medium.svg#gotham-medium') format('svg');
+  src: url(../fonts/Roboto-Medium.ttf);
+  src: url('../fonts/Roboto-Medium.ttf?#iefix') format('embedded-opentype'), url(../fonts/Roboto-Medium.ttf) format('woff'), url(../fonts/Roboto-Medium) format('truetype'), url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -2772,8 +2772,8 @@ img.rsImg {
 
 @font-face {
   font-family: "fontbase-book";
-  src: url(../fonts/gotham-book.eot);
-  src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'), url(../fonts/gotham-book.woff) format('woff'), url(../fonts/gotham-book.ttf) format('truetype'), url('../fonts/gotham-book.svg#gotham-book') format('svg');
+  src: url(../fonts/Roboto-Medium.ttf);
+  src: url('../fonts/Roboto-Medium.ttf?#iefix') format('embedded-opentype'), url(../fonts/Roboto-Medium.ttf) format('woff'), url(../fonts/Roboto-Medium.ttf) format('truetype'), url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -11008,9 +11008,9 @@ ul.alisveris-sokagi{
       font-family: 'fontbase-bold', arial, helvetica, sans-serif;
       font-size: 30px
   }
-  
+
   .section.type-1 .image img {-webkit-transform:none; -ms-transform:none; transform:none; top:4%; left:17%;}
-  
+
   .section.type-1 .text .button {
       margin-top: 1em
   }
@@ -13617,14 +13617,14 @@ float:left;
   color:#FFFFFF;
   font-size:15px;
   font-weight: bold;
-  
+
 }
 .date_modal_in table .days{
   background-color: #b58a96;
   color:#000000;
   font-size:15px;
   font-weight: bold;
- 
+
 }
 .date_modal_in table .days td{
   border-left:1px solid #FFFFFF;
@@ -13666,7 +13666,7 @@ float:left;
   margin-top: 20px;
   display: inline-block;
   width: 100%;
- 
+
 }
 .date_modal_in .form .form-bottom  .form-item {
   float: left;
@@ -13698,7 +13698,7 @@ float:left;
  .date_modal_in .form-item:nth-child(3),  .date_modal_in .form-item:nth-child(5) {
   clear: left;
 }
- 
+
 .callPhone_data{
       text-align: center;
     line-height: 40px;
@@ -13743,7 +13743,7 @@ height:auto;
 .date_modal_in .form .form-bottom .form-item{
   margin-bottom: 23px;
 }
-} 
+}
 
 
 @media only screen and (max-width:992px) {
@@ -13758,16 +13758,16 @@ height:auto;
     border:1px solid #FFFFFF !important;
     -webkit-appearance: none;
   }
-  
+
   .date_modal_in  .form .form-item.input input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #4e4e4e;
     opacity: 1; /* Firefox */
   }
-  
+
   .date_modal_in  .form .form-item.input input:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #4e4e4e;
   }
-  
+
   .date_modal_in  .form .form-item.input input::-ms-input-placeholder { /* Microsoft Edge */
     color: #4e4e4e;
   }
@@ -13786,7 +13786,7 @@ height:auto;
  .table-rp{
    overflow-y:auto;
    width:100%;
- } 
+ }
  .table-rp table{
   min-width:1000px;
 }
@@ -13819,13 +13819,13 @@ height:auto;
       line-height: 10.5rem !important;
     }
  }
- 
-  
+
+
  .date_modal_in  .form-item.select .selectboxit-container span{
   line-height: 3.5rem;
  }
  .date_modal_in  .selectboxit .selectboxit-arrow-container .selectboxit-arrow{
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
 }
 
 .footer-fix-box {
@@ -13888,7 +13888,7 @@ border-radius: 10px 0 0 10px;
 }
 .footer-fix-img img{
   display:inline-block;
-  
+
   height:26px;
 }
 /*
@@ -13971,7 +13971,7 @@ background-color: #500c20;
     height: 15px;
   }
   .footer-fix-text #goruntulu_button_wrapper,.footer_chat_text{
-    
+
   }
   .footer-fix-item{
     padding: 3px;
@@ -14139,7 +14139,7 @@ display:block;
 @media only screen and (max-width: 640px){
 
   #video-cover {
-    position: absolute !important; 
+    position: absolute !important;
     z-index: 5 !important;
     top: 27% !important;
     left: 5% !important;

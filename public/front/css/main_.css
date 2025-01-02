@@ -2693,8 +2693,8 @@ img.rsImg {
 
 @font-face {
   font-family: "fontbase-bold";
-  src: url(../fonts/gotham-bold.eot);
-  src: url('../fonts/gotham-bold.eot?#iefix') format('embedded-opentype'), url(../fonts/gotham-bold.woff) format('woff'), url(../fonts/gotham-bold.ttf) format('truetype'), url('../fonts/gotham-bold.svg#gotham-bold') format('svg');
+  src: url(../fonts/Roboto-Bold.ttf);
+  src: url('../fonts/Roboto-Bold.ttf?#iefix') format('embedded-opentype'), url(../fonts/Roboto-Bold.ttf) format('woff'), url(../fonts/Roboto-Bold.ttf) format('truetype'), url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -2703,8 +2703,8 @@ img.rsImg {
 
 @font-face {
   font-family: "fontbase-medium";
-  src: url(../fonts/gotham-medium.eot);
-  src: url('../fonts/gotham-medium.eot?#iefix') format('embedded-opentype'), url(../fonts/gotham-medium.woff) format('woff'), url(../fonts/gotham-medium.ttf) format('truetype'), url('../fonts/gotham-medium.svg#gotham-medium') format('svg');
+  src: url(../fonts/Roboto-Medium.ttf);
+  src: url('../fonts/Roboto-Medium.ttf?#iefix') format('embedded-opentype'), url(../fonts/Roboto-Medium.ttf) format('woff'), url(../fonts/Roboto-Medium) format('truetype'), url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -2713,8 +2713,8 @@ img.rsImg {
 
 @font-face {
   font-family: "fontbase-book";
-  src: url(../fonts/gotham-book.eot);
-  src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'), url(../fonts/gotham-book.woff) format('woff'), url(../fonts/gotham-book.ttf) format('truetype'), url('../fonts/gotham-book.svg#gotham-book') format('svg');
+  src: url(../fonts/Roboto-Medium.ttf);
+  src: url('../fonts/Roboto-Medium.ttf?#iefix') format('embedded-opentype'), url(../fonts/Roboto-Medium.ttf) format('woff'), url(../fonts/Roboto-Medium.ttf) format('truetype'), url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -13522,14 +13522,14 @@ float:left;
   color:#FFFFFF;
   font-size:15px;
   font-weight: bold;
-  
+
 }
 .date_modal_in table .days{
   background-color: #b58a96;
   color:#000000;
   font-size:15px;
   font-weight: bold;
- 
+
 }
 .date_modal_in table .days td{
   border-left:1px solid #FFFFFF;
@@ -13567,7 +13567,7 @@ float:left;
   margin-top: 20px;
   display: inline-block;
   width: 100%;
- 
+
 }
 .date_modal_in .form .form-bottom  .form-item {
   float: left;
@@ -13622,5 +13622,5 @@ height:auto;
     border-radius: 9px;
     border: solid 3px #6f1832;
   }
- 
+
  }
