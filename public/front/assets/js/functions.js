@@ -22,7 +22,7 @@ function nextLetterInAlphabet(c) {
 }
 
 function resizer(){
-    wW = $(window).width();  
+    wW = $(window).width();
 }
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -30,7 +30,7 @@ function getParameterByName(name) {
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-    
+
 $(document).ready(function () {
     if(getParameterByName('utm_source')!=null && getParameterByName('utm_source')!=""){
         $('#utm_source').val(getParameterByName('utm_source'));
@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     var owl6 = $('.gallerySlider');
     owl6.owlCarousel({ smartSpeed: 700, loop: true, margin: 0, autoplay:false,responsiveClass: true, nav:true, dots:true, items: 1, thumbs: true, thumbImage: true,lazyLoad:true, thumbContainerClass: 'owl-thumbs', thumbItemClass: 'owl-thumb-item', responsive: { 0: {}, 780:{} }});
-    
+
     $('.planCategory a').click(function(event) {
         $this = $(this);
         if(!$this.hasClass('selected')){
@@ -103,7 +103,7 @@ $(document).ready(function () {
 
         }
         return false;
-    });    
+    });
 
     $('.resendSuccess').click(function(){
         var dataId = $('.phoneValidate input[name="dataId"]').val();
@@ -131,20 +131,25 @@ $(document).ready(function () {
         $('#talep-formu').toggleClass('opened');
     });
 
+    $('a.arrowLink').click(function(event) {
+        $('a.arrowLink').toggleClass('selected');
+        $('#talep-formu').toggleClass('opened');
+    });
+
 });
 
 $(function () {
-    
+
     var activeIndex = $('.active-tab').index(),
         $contentlis = $('.tabs-content .tabs'),
         $tabslis = $('.tabsBtn a');
-    
+
     $contentlis.eq(activeIndex).show();
-  
+
     $('.tabsBtn').on('click', 'a' , function (e) {
       var $current = $(e.currentTarget),
           index = $current.index();
-      
+
       $tabslis.removeClass('active-tab');
       $current.addClass('active-tab');
       $contentlis.hide().eq(index).show();
@@ -287,7 +292,7 @@ $(function(){
                         $('.codeFormData input[name="dataId"]').val(data.dataId);
                     }
                 })
-                return;         
+                return;
         },
         invalidHandler: function(form, validator) {
             var errors = validator.numberOfInvalids();
@@ -373,5 +378,5 @@ $(function(){
             $('#talep-formu').removeClass('opened');
             $('.callForm').removeClass('selected');
         }
-       
+
      });

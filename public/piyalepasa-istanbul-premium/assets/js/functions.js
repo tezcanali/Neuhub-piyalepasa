@@ -279,12 +279,6 @@ $("#form-talep").validate({
     }
 });
 
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-
 var sendCount = 0;
 
 function sendFormData() {
@@ -303,7 +297,6 @@ function sendFormData() {
             email: $('input[name="email"]').val(),
             message: $('textarea[name="message"]').val(),
             konu: 'PİYALEPAŞA İSTANBUL PREMIUM',
-            _token: $('meta[name="csrf-token"]').attr('content')
         };
 
         $.ajax({

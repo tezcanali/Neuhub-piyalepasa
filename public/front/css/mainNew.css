@@ -1,7 +1,7 @@
 
 .scale-fix1{
   transform: scale(0.7);
-} 
+}
 .arGallery section {
   display: none;
 }
@@ -2781,7 +2781,7 @@ html {
 }
 
 body {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: 'fontbase-book', arial, helvetica, sans-serif;
   color: #6f1832
 }
@@ -10997,9 +10997,9 @@ ul.alisveris-sokagi{
       font-family: 'fontbase-bold', arial, helvetica, sans-serif;
       font-size: 30px
   }
-  
+
   .section.type-1 .image img {-webkit-transform:none; -ms-transform:none; transform:none; top:4%; left:17%;}
-  
+
   .section.type-1 .text .button {
       margin-top: 1em
   }
@@ -13615,14 +13615,14 @@ float:left;
   color:#FFFFFF;
   font-size:15px;
   font-weight: bold;
-  
+
 }
 .date_modal_in table .days{
   background-color: #b58a96;
   color:#000000;
   font-size:15px;
   font-weight: bold;
- 
+
 }
 .date_modal_in table .days td{
   border-left:1px solid #FFFFFF;
@@ -13664,7 +13664,7 @@ float:left;
   margin-top: 20px;
   display: inline-block;
   width: 100%;
- 
+
 }
 .date_modal_in .form .form-bottom  .form-item {
   float: left;
@@ -13696,7 +13696,7 @@ float:left;
  .date_modal_in .form-item:nth-child(3),  .date_modal_in .form-item:nth-child(5) {
   clear: left;
 }
- 
+
 .callPhone_data{
       text-align: center;
     line-height: 40px;
@@ -13741,7 +13741,7 @@ height:auto;
 .date_modal_in .form .form-bottom .form-item{
   margin-bottom: 23px;
 }
-} 
+}
 
 
 @media only screen and (max-width:992px) {
@@ -13756,16 +13756,16 @@ height:auto;
     border:1px solid #FFFFFF !important;
     -webkit-appearance: none;
   }
-  
+
   .date_modal_in  .form .form-item.input input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #4e4e4e;
     opacity: 1; /* Firefox */
   }
-  
+
   .date_modal_in  .form .form-item.input input:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #4e4e4e;
   }
-  
+
   .date_modal_in  .form .form-item.input input::-ms-input-placeholder { /* Microsoft Edge */
     color: #4e4e4e;
   }
@@ -13784,7 +13784,7 @@ height:auto;
  .table-rp{
    overflow-y:auto;
    width:100%;
- } 
+ }
  .table-rp table{
   min-width:1000px;
 }
@@ -13817,13 +13817,13 @@ height:auto;
       line-height: 10.5rem !important;
     }
  }
- 
-  
+
+
  .date_modal_in  .form-item.select .selectboxit-container span{
   line-height: 3.5rem;
  }
  .date_modal_in  .selectboxit .selectboxit-arrow-container .selectboxit-arrow{
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
 }
 
 .footer-fix-box {
@@ -13886,7 +13886,7 @@ border-radius: 10px 0 0 10px;
 }
 .footer-fix-img img{
   display:inline-block;
-  
+
   height:26px;
 }
 /*
@@ -13969,7 +13969,7 @@ background-color: #500c20;
     height: 15px;
   }
   .footer-fix-text #goruntulu_button_wrapper,.footer_chat_text{
-    
+
   }
   .footer-fix-item{
     padding: 3px;
@@ -14137,7 +14137,7 @@ display:block;
 @media only screen and (max-width: 640px){
 
   #video-cover {
-    position: absolute !important; 
+    position: absolute !important;
     z-index: 5 !important;
     top: 27% !important;
     left: 5% !important;

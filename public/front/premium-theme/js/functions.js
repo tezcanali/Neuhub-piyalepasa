@@ -258,6 +258,11 @@ $(document).ready(function () {
         $('#talep-formu').toggleClass('opened');
     });
 
+    $('a.arrowLink').click(function(event) {
+        $('a.arrowLink').toggleClass('selected');
+        $('#talep-formu').toggleClass('opened');
+    });
+
 });
 
 

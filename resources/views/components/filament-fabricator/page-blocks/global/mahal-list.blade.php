@@ -6,7 +6,7 @@
                 <a href="{{ Storage::url($planImage) }}" data-fancybox="" class="konutTeaserLink brown">
                     <span class="txt">
                         <small>{{ $planTitle ?? 'Yerleşim' }}<br></small>
-                        <span>{{ $planSubtitle ?? 'Yerleşim planını görüntüleyin.' }}</span>
+                        <p style="font-size:17px">{{ $planSubtitle ?? 'Yerleşim planını görüntüleyin.' }}</p>
                         <i></i>
                     </span>
                 </a>
@@ -14,7 +14,7 @@
             <div class="col col-3">
                 <a href="{{ Storage::url($mahalPdf) }}" target="_blank" class="konutTeaserLink">
                     <span class="txt">
-                        <small>{{ $mahalTitle ?? 'Mahal' }}<br>Listesi</small>
+                        <small>{{ $mahalTitle ?? 'Mahal' }}</small>
                         <i></i>
                     </span>
                     <span class="img">
