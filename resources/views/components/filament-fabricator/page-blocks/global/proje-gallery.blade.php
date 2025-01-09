@@ -20,9 +20,6 @@
                 <div class="clear"></div>
 
             </div>
-            <div class="text-center">
-                <a class="more icon-arrow-down">daha fazla fotoğraf göster</a>
-            </div>
         </div>
 
     </div>
