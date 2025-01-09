@@ -57,10 +57,15 @@ h1,
 h2,
 h3,
 h4,
-h5,
-p,
-article {
+h5
+{
   font-weight: 400
+}
+
+p,
+article
+{
+    font-weight: 300
 }
 
 p,

@@ -13,7 +13,7 @@
                             @endif
                             @if($highlightText1)
                                 <strong
-                                    style="color: #BFA474;font-size:40px;font-weight: 500;">{!! $highlightText1 !!}</strong>
+                                    style="color: #BFA474;font-size:50px;font-weight: 500;">{!! $highlightText1 !!}</strong>
                             @endif
                             @if($subtitle)
                                 {!! $subtitle !!}
