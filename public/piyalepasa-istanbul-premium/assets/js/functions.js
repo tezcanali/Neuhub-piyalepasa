@@ -321,6 +321,42 @@ function sendFormData() {
     }
 }
 
+$('.phoneValidate').submit(function(e) {
+    e.preventDefault();
+
+    // Ülke kodunu ve telefon numarasını birleştir
+    const dialCode = $('.selected-dial-code').text(); // Örn: +90
+    const phoneInput = $('.intltelinput').val(); // Örn: 5348970934
+    const fullPhoneNumber = dialCode + phoneInput; // Örn: +905348970934
+
+    const verifyData = {
+        dataId: $('.phoneValidate input[name="dataId"]').val(),
+        phone: fullPhoneNumber, // Birleştirilmiş tam telefon numarası
+        code: $('.phoneValidate input[name="code"]').val(),
+        firstName: $('input[name="name"]').val(),
+        lastName: $('input[name="lastname"]').val(),
+        email: $('input[name="email"]').val(),
+        konu: 'PİYALEPAŞA İSTANBUL PREMIUM',
+        _token: $('meta[name="csrf-token"]').attr('content')
+    };
+
+    $.ajax({
+        type: 'POST',
+        url: '/sms-submit',
+        data: verifyData,
+        success: function(response) {
+            if(response.success && response.redirect) {
+                window.location.href = response.redirect;
+            } else {
+                $.alert({title: 'Hata', content: response.message || 'Bir hata oluştu'});
+            }
+        },
+        error: function(xhr) {
+            $.alert({title: 'Hata', content: xhr.responseJSON.message || 'Doğrulama başarısız oldu'});
+        }
+    });
+});
+
 function resetFormButton() {
     blockMultiClick = true;
     $('#send_button').css('opacity', 1)
