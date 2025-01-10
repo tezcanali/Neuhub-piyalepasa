@@ -14,7 +14,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->trustProxies(at: '*');
         $middleware->validateCsrfTokens(except: [
-            'api/gallery',
+            '/form-submit',
+            '/sms-submit',
         ]);
         $middleware->append(RedirectMiddleware::class);
     })
