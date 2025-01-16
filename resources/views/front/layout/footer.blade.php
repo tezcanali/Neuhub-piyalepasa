@@ -60,9 +60,9 @@
     <div class="copyright-bar">
         <div class="ppasa-logo"><a href="/" title="piyalepasa"><img
                     src="{{asset('front/premium-theme/images/logoDark.svg')}}" alt="Piyalepaşa"></a></div>
-        <div class="copy">2023 PİYALEPAŞA. T&Uuml;M HAKLARI SAKLIDIR.</div>
+        <div class="copy">@lang('footer.copyright')</div>
         <div class="social-bar">
-            bizi takip edin
+            @lang('footer.follow')
             @foreach($settings->social_network as $platform => $url)
                 @if($url !== null)
                     <a href="{{ $url }}" target="_blank" rel="noopener"

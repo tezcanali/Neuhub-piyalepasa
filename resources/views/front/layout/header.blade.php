@@ -91,9 +91,9 @@
 
         <div class="right">
             <div class="rightInner">
-                <p style="font-weight:bold;">İletişim</p>
+                <p style="font-weight:bold;">@lang('header.contact')</p>
                 <a class="phone-link" href="tel:+902122120404">+90 212 212 04 04</a>
-                <p style="font-weight:bold;">Tanıtım Filmi</p>
+                <p style="font-weight:bold;">@lang('header.promotional_movie')</p>
                 <a href="https://www.youtube.com/watch?v=3ZOUBVI4xiI" data-fancybox class="videoLink"><img
                         src="{{asset('front/premium-theme/images/img/video.jpg')}}"></a>
                 <div class="social">
@@ -117,11 +117,10 @@
 
         <a href="{{asset('front/premium-theme/media/Piyalepasa_Premium_Katalog.pdf')}}" class="showOnMobile"
            target="_blank"><span><img
-                    src="{{asset('front/premium-theme/images/icons/catalogue.svg')}}"><small>KATALOG</small></span></a>
+                    src="{{asset('front/premium-theme/images/icons/catalogue.svg')}}"><small>@lang('header.catalog')</small></span></a>
         <a href="https://api.whatsapp.com/send?phone=905338139090&text=" target="_blank"><span><img
-                    src="{{asset('front/premium-theme/images/icons/whatsapp.svg')}}"><small>WHATSAPP MESAJ</small></span></a>
-        <a href="#" class="callForm"><span><img src="{{asset('front/premium-theme/images/icons/form.svg')}}"><small>SİZİ
-                        ARAYALIM </small></span></a>
+                    src="{{asset('front/premium-theme/images/icons/whatsapp.svg')}}"><small>@lang('header.whatsapp')/small></span></a>
+        <a href="#" class="callForm"><span><img src="{{asset('front/premium-theme/images/icons/form.svg')}}"><small>@lang('header.call')</small></span></a>
     </div>
 
     <div id="talep-formu">
@@ -130,14 +129,14 @@
         </div>
         <div class="formContent">
             <div class="codeFormData">
-                <p class="info">Formu Doldurun, <span>SİZİ ARAYALIM </span></p>
+                <p class="info">@lang('header.form1') <span>@lang('header.form2') </span></p>
                 <a class="closeFormData"
                    style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; cursor: pointer; position: absolute; right: 0px; top: 0px;">×</a>
                 <form class="phoneValidate" action="/sms-submit">
                     <div class="fRow">
                         <div class="fCol input">
                             <div class="element"><input type="text" name="code" minlength="4"
-                                                        placeholder="ONAY KODU"/></div>
+                                                        placeholder="@lang('header.form_code')"/></div>
                             <input type="hiden" style="display: none;" name="phone"/>
                             <input type="hiden" style="display: none;" name="dataId"/>
                         </div>
@@ -145,7 +144,7 @@
                     <div class="fRow">
                         <div class="fCol">
                             <div class="element">
-                                <button id="verifyDataBtn" type="submit">Onayla</button>
+                                <button id="verifyDataBtn" type="submit">@lang('header.submit')</button>
                             </div>
                         </div>
                     </div>
@@ -172,17 +171,17 @@
                 <input type="hidden" value="" id="gclid" name="gclid">
 
                 <div class="form">
-                    <p class="info">Formu Doldurun, <span>SİZİ ARAYALIM </span></p>
+                    <p class="info">@lang('header.form1') <span>@lang('header.form2') </span></p>
                     <div class="fRow">
                         <div class="fCol input">
                             <div class="element"><input type="text" name="name" id="dummyName01"
-                                                        placeholder="Adınız"/></div>
+                                                        placeholder="@lang('header.form_name')"/></div>
                         </div>
                     </div>
                     <div class="fRow">
                         <div class="fCol input">
                             <div class="element"><input type="text" name="lastname" id="dummyName07"
-                                                        placeholder="Soyadınız"/></div>
+                                                        placeholder="@lang('header.form_surname')"/></div>
                         </div>
                     </div>
                     <div class="fRow">
@@ -190,14 +189,14 @@
                             <div class="element">
                                 <input class="intltelinput" type="text"/>
                                 <input class="hidden phoneInput" type="text" name="phoneNumber" id="dummyName03"
-                                       placeholder="TELEFON NUMARANIZ"/>
+                                       placeholder="@lang('header.form_phone')"/>
                             </div>
                         </div>
                     </div>
                     <div class="fRow">
                         <div class="fCol input">
                             <div class="element"><input type="text" name="email" id="dummyName02"
-                                                        placeholder="E-posta Adresiniz"/></div>
+                                                        placeholder="@lang('header.form_email')"/></div>
                         </div>
                     </div>
 
@@ -210,7 +209,7 @@
                     <div class="fRow">
                         <div class="fCol checkbox">
                             <input type="checkbox" name="private" value="1" id="dummyName05"/><label
-                                for="dummyName05"><span></span>AB vatandaşıyım.</label>
+                                for="dummyName05"><span></span>@lang('header.form_check')</label>
                         </div>
                     </div>
                     <div class="fRow">
@@ -226,7 +225,7 @@
                     <div class="fRow">
                         <div class="fCol">
                             <div class="element">
-                                <button id="send_button" type="submit">G&ouml;nder</button>
+                                <button id="send_button" type="submit">@lang('header.send')</button>
                             </div>
                         </div>
                     </div>
