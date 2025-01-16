@@ -26,7 +26,7 @@
 
             <a href="{{asset('front/premium-theme/media/Piyalepasa_Premium_Katalog.pdf')}}" target="_blank"><span><img
                         src="{{asset('front/premium-theme/images/icons/catalogue.svg')}}"
-                        style="display:block; width:36px;"><small>KATALOG</small></span></a>
+                        style="display:block; width:36px;"><small>@lang('header.catalog')</small></span></a>
 
             <a href="./en"><span><img
                         src="{{asset('front/premium-theme/images/icons/lang.svg')}}"><small>EN</small></span></a>
@@ -119,7 +119,7 @@
            target="_blank"><span><img
                     src="{{asset('front/premium-theme/images/icons/catalogue.svg')}}"><small>@lang('header.catalog')</small></span></a>
         <a href="https://api.whatsapp.com/send?phone=905338139090&text=" target="_blank"><span><img
-                    src="{{asset('front/premium-theme/images/icons/whatsapp.svg')}}"><small>@lang('header.whatsapp')/small></span></a>
+                    src="{{asset('front/premium-theme/images/icons/whatsapp.svg')}}"><small>@lang('header.whatsapp')</small></span></a>
         <a href="#" class="callForm"><span><img src="{{asset('front/premium-theme/images/icons/form.svg')}}"><small>@lang('header.call')</small></span></a>
     </div>
 
