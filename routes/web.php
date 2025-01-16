@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FormController;
+use App\Http\Middleware\SetLocale;
 
-Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+Route::group(['middleware' => ['web', SetLocale::class]], function () {
+    Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+});
 
 Route::get('/sitemap', [\App\Http\Controllers\SitemapController::class, 'index']);
 
