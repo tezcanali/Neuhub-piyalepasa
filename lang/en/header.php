@@ -6,7 +6,7 @@ return [
     "virtual_tour" => "Virtual Tour",
     "whatsapp" => "Whatsapp Message",
     "call" => "Contact Us",
-    "catalog" => "Catalog",
+    "catalog" => "CATALOG",
     "form1" => "Fill out the form to",
     "form2" => "receive a call from us",
     "form_code" => "AUTH CODE",
