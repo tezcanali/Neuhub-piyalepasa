@@ -1,29 +1,53 @@
 @php
     use Datlechin\FilamentMenuBuilder\Models\Menu;
-        $web_menu = Menu::location('header');
+        $locale = app()->getLocale();
+        $web_menu = Menu::location('footer');
+        $web_menu_en = Menu::location('footer_en');
         $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
 @endphp
 <footer class="section no-height">
     <nav id="footer-menu">
         <ul>
-            @foreach($web_menu->menuItems as $item)
-                @if($item->children->isNotEmpty())
-                    <li>
-                        <strong>{{ $item->title }}</strong>
-                        <ul>
-                            @foreach($item->children as $child)
-                                <li>
-                                    <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </li>
-                @else
-                    <li>
-                        <a href="{{ $item->url }}"><strong>{{ $item->title }}</strong></a>
-                    </li>
-                @endif
-            @endforeach
+            @if($locale == "tr")
+                @foreach($web_menu->menuItems as $item)
+                    @if($item->children->isNotEmpty())
+                        <li>
+                            <strong>{{ $item->title }}</strong>
+                            <ul>
+                                @foreach($item->children as $child)
+                                    <li>
+                                        <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @else
+                        <li>
+                            <a href="{{ $item->url }}"><strong>{{ $item->title }}</strong></a>
+                        </li>
+                    @endif
+                @endforeach
+            @elseif($locale == "en")
+                @foreach($web_menu_en->menuItems as $item)
+                    @if($item->children->isNotEmpty())
+                        <li>
+                            <strong>{{ $item->title }}</strong>
+                            <ul>
+                                @foreach($item->children as $child)
+                                    <li>
+                                        <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @else
+                        <li>
+                            <a href="{{ $item->url }}"><strong>{{ $item->title }}</strong></a>
+                        </li>
+                    @endif
+                @endforeach
+            @endif
+
 
         </ul>
     </nav>

@@ -1,6 +1,8 @@
 @php
     use Datlechin\FilamentMenuBuilder\Models\Menu;
+    $locale = app()->getLocale();
     $web_menu = Menu::location('header');
+    $web_menu_en = Menu::location('headerEn');
     $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
 @endphp
 <header>
@@ -44,24 +46,46 @@
     <nav>
         <div class="left">
             <ul class="with-customer">
-                @foreach($web_menu->menuItems as $item)
-                    @if($item->children->isNotEmpty())
-                        <li>
-                            <a href="javascript:;" title="{{ $item->title }}">{{ $item->title }}</a>
-                            <ul>
-                                @foreach($item->children as $child)
-                                    <li>
-                                        <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
-                    @else
-                        <li>
-                            <a href="{{ $item->url }}">{{ $item->title }}</a>
-                        </li>
-                    @endif
-                @endforeach
+                @if($locale == "en")
+                    @foreach($web_menu_en->menuItems as $item)
+                        @if($item->children->isNotEmpty())
+                            <li>
+                                <a href="javascript:;" title="{{ $item->title }}">{{ $item->title }}</a>
+                                <ul>
+                                    @foreach($item->children as $child)
+                                        <li>
+                                            <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @else
+                            <li>
+                                <a href="{{ $item->url }}">{{ $item->title }}</a>
+                            </li>
+                        @endif
+                    @endforeach
+                @elseif($locale == "tr")
+                    @foreach($web_menu->menuItems as $item)
+                        @if($item->children->isNotEmpty())
+                            <li>
+                                <a href="javascript:;" title="{{ $item->title }}">{{ $item->title }}</a>
+                                <ul>
+                                    @foreach($item->children as $child)
+                                        <li>
+                                            <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @else
+                            <li>
+                                <a href="{{ $item->url }}">{{ $item->title }}</a>
+                            </li>
+                        @endif
+                    @endforeach
+                @endif
+
             </ul>
         </div>
 

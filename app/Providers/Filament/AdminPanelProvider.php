@@ -74,6 +74,8 @@ class AdminPanelProvider extends PanelProvider
                     ->addLocations([
                         'header' => 'Header',
                         'footer' => 'Footer',
+                        'headerEn' => 'Header EN',
+                        'footerEn' => 'Footer EN',
                     ]),
                 FilamentTranslatableFieldsPlugin::make()
                     ->supportedLocales([
