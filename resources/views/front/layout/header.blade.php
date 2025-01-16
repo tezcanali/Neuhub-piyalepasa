@@ -2,7 +2,7 @@
     use Datlechin\FilamentMenuBuilder\Models\Menu;
     $locale = app()->getLocale();
     $web_menu = Menu::location('header');
-    $web_menu_en = Menu::location('headerEn');
+    $web_menu_en = Menu::location('headeren');
     $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
 @endphp
 <header>

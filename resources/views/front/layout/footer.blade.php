@@ -2,7 +2,7 @@
     use Datlechin\FilamentMenuBuilder\Models\Menu;
         $locale = app()->getLocale();
         $web_menu = Menu::location('footer');
-        $web_menu_en = Menu::location('footer_en');
+        $web_menu_en = Menu::location('footeren');
         $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
 @endphp
 <footer class="section no-height">
