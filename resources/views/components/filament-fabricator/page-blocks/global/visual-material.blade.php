@@ -7,8 +7,8 @@
         <div class="news-grid">
             <ul class="boxArea">
                 @foreach($files as $item)
-                    <li style="display:none;">
-                        <a download="piyalepasa-icon-1.zip"
+                    <li>
+                        <a download="{{ \Illuminate\Support\Facades\Storage::url($item['file']) }}"
                            href="{{ \Illuminate\Support\Facades\Storage::url($item['file']) }}">
                             <figure><img src="{{ \Illuminate\Support\Facades\Storage::url($item['image']) }}"
                                          alt="{{ $item['title'] }}"></figure>

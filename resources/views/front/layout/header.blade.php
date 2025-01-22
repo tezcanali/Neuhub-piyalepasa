@@ -14,7 +14,7 @@
             <a href="https://polatpiyalepasacarsi.com/"><span>
                     <img style="margin:0;" src="{{asset('front/images/yeni-image.webp')}}"></span></a>
 
-            <a href="{{asset('front/premium-theme/media/timelapse.mp4')}}" data-fancybox><span><img
+            <a href="{{asset('front/premium-theme/image/Ocak2025-timelapse.mp4')}}" data-fancybox><span><img
                         src="{{asset('front/premium-theme/images/icons/timelapse.svg')}}"><small>TIME LAPSE</small></span></a>
 
             <a data-fancybox="gallery" href="https://www.youtube.com/embed/8MxhPo-wsfY?autoplay=1">
