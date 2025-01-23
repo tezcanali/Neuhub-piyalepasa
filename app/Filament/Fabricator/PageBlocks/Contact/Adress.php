@@ -46,6 +46,8 @@ class Adress extends PageBlock
                         TextInput::make('mobile')
                             ->label('Mobil Telefon')
                             ->tel(),
+                        TextInput::make('yol_tarif')
+                            ->label('Yol Tarif URL'),
                     ])
                     ->label('Ofisler')
                     ->collapsible()

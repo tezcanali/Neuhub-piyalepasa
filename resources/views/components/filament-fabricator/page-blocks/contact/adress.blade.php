@@ -16,7 +16,7 @@
                     @if(isset($office['mobile']))
                         <p class=""><a href="tel:{{ $office['mobile'] }}">{{ $office['mobile'] }}</a></p>
                     @endif
-                    <p><a href="" class="arrowBtn"><span>YOL TARİFİ</span></a></p>
+                    <p><a href="{{ $yolTarif }}" class="arrowBtn"><span>YOL TARİFİ</span></a></p>
                     <br><br>
                 @endforeach
             </div>
