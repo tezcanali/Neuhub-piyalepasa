@@ -1,21 +1,8 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Roboto";
   src: url("fonts/Roboto-MediumItalic.ttf");
   font-weight: 500;
   font-style: italic;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-Book.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-XLight.ttf");
-  font-weight: 200;
-  font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
@@ -31,12 +18,6 @@
 }
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/Roboto-BookItalic.ttf");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Roboto";
   src: url("fonts/Roboto-Black.ttf");
   font-weight: 900;
   font-style: normal;
@@ -45,12 +26,6 @@
   font-family: "Roboto";
   src: url("fonts/Roboto-BlackItalic.ttf");
   font-weight: 900;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-XLightItalic.ttf");
-  font-weight: 200;
   font-style: italic;
 }
 @font-face {
