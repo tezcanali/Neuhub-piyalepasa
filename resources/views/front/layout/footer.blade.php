@@ -66,7 +66,7 @@
             @foreach($settings->social_network as $platform => $url)
                 @if($url !== null)
                     <a href="{{ $url }}" target="_blank" rel="noopener"
-                       class="icon-{{ $platform }}{{ $platform === 'youtube' ? '-play' : '-1' }}"></a>
+                       class="icofont-{{ $platform }}{{ $platform === 'youtube' ? '-play' : '' }}"></a>
                 @endif
             @endforeach
         </div>
