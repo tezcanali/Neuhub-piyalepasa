@@ -148,6 +148,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--
                     <div class="fRow">
                         <div class="fCol input">
                             <a data-href="./api/resendVerifyCode.php" class="resendSuccess">Onay Kodunu Tekrar
@@ -158,7 +159,7 @@
                         <div class="fCol input" style="font-size:10px; text-align:center;">**Formunuzun iletilmesi
                             için telefonunuza gelen kodu girmelisiniz.
                         </div>
-                    </div>
+                    </div> -->
                 </form>
             </div>
             <form method="POST" action="/" accept-charset="UTF-8" id="form-talep">
