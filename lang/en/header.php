@@ -15,7 +15,7 @@ return [
     "form_email" => "Email",
     "form_phone" => "Phone Number",
     "form_check" => "I am an EU citizen.",
-    "form_check2" => " I have read and accepted the Clarification text and “Declaration of Explicit Consent",
+    "form_check2" => "I have read and accepted the <a href='#aydinlatmaMetni' data-fancybox=''>“Clarification text“</a> and <a href='#acikRiza' data-fancybox=''>“Declaration of Explicit Consent”</a>",
     "submit" => "Confirm",
     "send" => "Submit",
 ];

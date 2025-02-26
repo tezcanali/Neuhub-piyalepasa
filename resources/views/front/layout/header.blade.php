@@ -216,9 +216,7 @@
                         <div class="fCol checkbox">
                             <input type="checkbox" required name="agreed" value="1" id="dummyName06"/><label
                                 for="dummyName06"><span></span>
-                                <a href="#aydinlatmaMetni" data-fancybox="">“Aydınlatma metni”ni</a> ve <a
-                                    href="#acikRiza" data-fancybox="">“Açık Rıza Beyanı”</a>nı okudum kabul
-                                ediyorum..
+                                @lang('header.form_check2')
                             </label>
                         </div>
                     </div>

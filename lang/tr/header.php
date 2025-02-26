@@ -15,7 +15,7 @@ return [
     "form_email" => "E-Posta Adresiniz",
     "form_phone" => "Telefon Numaranız",
     "form_check" => "AB Vatandaşıyım",
-    "form_check2" => "Aydınlatma Metni'ni ve Açık Rıza Beyanı'nı okudum kabul ediyorum.",
+    "form_check2" => "<a href='#aydinlatmaMetni' data-fancybox=''>“Aydınlatma metni“ni</a> ve <a href='#acikRiza' data-fancybox=''>“Açık Rıza Beyanı”</a>nı okudum kabul ediyorum..",
     "submit" => "Onayla",
     "send" => "Gönder",
 ];
