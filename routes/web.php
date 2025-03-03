@@ -14,3 +14,4 @@ Route::get('/sitemap', [\App\Http\Controllers\SitemapController::class, 'index']
 Route::post('/form-submit', [FormController::class, 'formSubmit'])->name('form-submit');
 Route::post('/sms-submit', [FormController::class, 'sendSms'])->name('sms-submit');
 Route::get('/tesekkurler', [FormController::class, 'showTesekkurler'])->name('tesekkurler');
+Route::get('/en/thank-you', [FormController::class, 'showTesekkurler'])->name('thank-you');

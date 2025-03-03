@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Http;
 class FormController extends Controller
 {
     protected $authUrl = 'https://ivt.mobildev.com/auth';
-    protected $postUrl = 'https://ivt.mobildev.com/data/075n3c3d';
+    protected $postUrl = 'https://ivt.mobildev.com/data/';
     protected $smsUrl = 'https://ivt.mobildev.com/data/verify/';
-    protected $username = '7955599023';
-    protected $password = 'ohm0vnztrsu0sqv6bryh77x00wi847';
+    protected $username = '0159579683';
+    protected $password = 'l9yfdqxo8ma51hzc7u0rca62d7uad4';
 
     public function formSubmit(Request $request)
     {
@@ -56,7 +56,7 @@ class FormController extends Controller
         ];
 
         $response = Http::withToken($bearerToken)
-            ->post($this->postUrl, $data);
+            ->post($this->postUrl . (strpos(request()->url(), '/en') !== false ? 'yv60h3c1' : 'g4miy64v'), $data);
 
         if ($response->successful()) {
             return response()->json([
@@ -110,9 +110,11 @@ class FormController extends Controller
                 ]);
 
             if ($responseCrm->successful()) {
+                $redirectRoute = strpos(request()->url(), '/en') !== false ? 'thank-you' : 'tesekkurler';
+
                 return response()->json([
                     'success' => true,
-                    'redirect' => route('tesekkurler', [
+                    'redirect' => route($redirectRoute, [
                         'name' => $request->firstName,
                         'email' => $request->email,
                         'phone' => $request->phone
@@ -135,6 +137,15 @@ class FormController extends Controller
     }
 
     public function showTesekkurler(Request $request)
+    {
+        return view('front.layout.tesekkurler', [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone
+        ]);
+    }
+
+    public function showThankyou(Request $request)
     {
         return view('front.layout.tesekkurler', [
             'name' => $request->name,
