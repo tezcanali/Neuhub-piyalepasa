@@ -56,7 +56,7 @@ class FormController extends Controller
         ];
 
         $response = Http::withToken($bearerToken)
-            ->post($this->postUrl . (strpos(request()->url(), '/en') !== false ? 'yv60h3c1' : 'g4miy64v'), $data);
+            ->post($this->postUrl . (strpos($request->url(), '/en') !== false ? 'yv60h3c1' : 'g4miy64v'), $data);
 
         if ($response->successful()) {
             return response()->json([
@@ -110,7 +110,7 @@ class FormController extends Controller
                 ]);
 
             if ($responseCrm->successful()) {
-                $redirectRoute = strpos(request()->url(), '/en') !== false ? 'thank-you' : 'tesekkurler';
+                $redirectRoute = strpos($request->url(), '/en') !== false ? 'thank-you' : 'tesekkurler';
 
                 return response()->json([
                     'success' => true,
