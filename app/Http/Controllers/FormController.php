@@ -147,7 +147,7 @@ class FormController extends Controller
 
     public function showThankyou(Request $request)
     {
-        return view('front.layout.tesekkurler', [
+        return view('front.layout.thankyou', [
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone
