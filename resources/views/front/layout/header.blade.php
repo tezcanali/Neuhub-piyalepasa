@@ -170,6 +170,7 @@
                 <input type="hidden" value="" id="utm_medium" name="utm_medium">
                 <input type="hidden" value="" id="utm_source" name="utm_source">
                 <input type="hidden" value="" id="gclid" name="gclid">
+                <input type="hidden" value="{{ $locale }}" id="language" name="language">
 
                 <div class="form">
                     <p class="info">@lang('header.form1') <span>@lang('header.form2') </span></p>

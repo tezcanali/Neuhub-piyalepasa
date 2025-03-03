@@ -56,7 +56,7 @@ class FormController extends Controller
         ];
 
         $response = Http::withToken($bearerToken)
-            ->post($this->postUrl . (strpos($request->url(), '/en') !== false ? 'yv60h3c1' : 'g4miy64v'), $data);
+            ->post($this->postUrl . ($request->language === 'en' ? 'yv60h3c1' : 'g4miy64v'), $data);
 
         if ($response->successful()) {
             return response()->json([
@@ -105,12 +105,12 @@ class FormController extends Controller
                     'IletisimOnay' => 'Evet',
                     'Url' => 'www.piyalepasa.com.tr',
                     'ProjeAdi' => $request->konu,
-                    'Dil' => 'TR',
+                    'Dil' => $request->language,
                     'Tarih' => Carbon::now()->addHours(3),
                 ]);
 
             if ($responseCrm->successful()) {
-                $redirectRoute = strpos($request->url(), '/en') !== false ? 'thank-you' : 'tesekkurler';
+                $redirectRoute = $request->language === 'en' ? 'thank-you' : 'tesekkurler';
 
                 return response()->json([
                     'success' => true,

@@ -437,7 +437,8 @@ $(function(){
                 email: $('input[name="email"]').val(),
                 message: $('textarea[name="message"]').val(),
                 konu: 'PİYALEPAŞA İSTANBUL PREMIUM',
-                _token: $('meta[name="csrf-token"]').attr('content')
+                _token: $('meta[name="csrf-token"]').attr('content'),
+                language: $('input[name="language"]').val(),
             };
 
             $.ajax({
@@ -478,7 +479,8 @@ $(function(){
             lastName: $('input[name="lastname"]').val(),
             email: $('input[name="email"]').val(),
             konu: 'PİYALEPAŞA İSTANBUL PREMIUM',
-            _token: $('meta[name="csrf-token"]').attr('content')
+            _token: $('meta[name="csrf-token"]').attr('content'),
+            language: $('input[name="language"]').val(),
         };
 
         $.ajax({
