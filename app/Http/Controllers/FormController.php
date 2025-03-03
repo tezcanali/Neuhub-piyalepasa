@@ -35,7 +35,7 @@ class FormController extends Controller
             "msisdn" => $request->phone,
             "email" => $request->email,
             "note" => $request->message,
-            "language" => "tr",
+            "language" => $request->language,
             "permSource" => 1,
             "accountType" => 1,
             "kvkk" => [
